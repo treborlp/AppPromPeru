@@ -6,10 +6,14 @@
 package Ventanas.Gastronomia;
 
 import Clases.Data;
+import Clases.HiloCorrectoIncorrecto;
 import Clases.Recursos;
+import Ventanas.FrmCorrecto;
+import Ventanas.FrmIncorrecto;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import Clases.VariablesGoblales;
 
 /**
  *
@@ -24,8 +28,6 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
     // String ArrayRespuestas[] = {"Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4", "Respuesta 5", "Respuesta 6", "Respuesta 7", "Respuesta 8", "Respuesta 9", "Respuesta 10"};
     //tools.asignarNombresBotones(ArrayRespuestas, jButton1, jButton2, jButton3, jButton4);
-    
-
     public FrmGastroPreguntas() {
         this.setUndecorated(true);
         initComponents();
@@ -38,15 +40,15 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         jButton4.setBounds(-320, 1000, 320, 50);
         lblPregunta.setBounds(-390, 770, 390, 80);
     }
-    
-    public void inicio(){
+
+    public void inicio() {
+        tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
         lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 1, 2, 1)));
         String pregunta = lblPregunta.getText();
         String idPregunta = tools.getID(data.Preguntas, pregunta, 0);
         String ArrayRespuestas[] = tools.getData(data.Respuestas, Integer.parseInt(idPregunta), 0, 1);
         tools.asignarNombresBotones(ArrayRespuestas, jButton1, jButton2, jButton3, jButton4);
     }
-
 
     public void verificarRespuesta(JButton btnRespuesta, JLabel lblPregunta) {
 
@@ -55,10 +57,28 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         String idPregunta = tools.getID(data.Preguntas, pregunta, 0);
         String idRespuesta = tools.getID(data.Respuestas, respuesta, 2);
 
-        System.out.println(idPregunta + "-----" + idRespuesta);
-        
-        if(idPregunta.equalsIgnoreCase(idRespuesta)){
+       // System.out.println(idPregunta + "-----" + idRespuesta);
+
+        if (idPregunta.equalsIgnoreCase(idRespuesta)) {
             btnRespuesta.setBackground(Color.green);
+            HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmCorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
+            VariablesGoblales.intentos++;
+            if (VariablesGoblales.intentos == 1) {
+                VariablesGoblales.primerIntento=true;
+            }
+            if (VariablesGoblales.intentos == 2) {
+                VariablesGoblales.segundoIntento=true;
+            }
+            if (VariablesGoblales.intentos == 3) {
+                VariablesGoblales.tercerIntento=true;
+            }
+            System.out.println(VariablesGoblales.intentos);
+
+        } else {
+            btnRespuesta.setBackground(Color.red);
+            HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmIncorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
+            VariablesGoblales.intentos++;
+            // HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmIncorrecto(), this);
         }
     }
 
@@ -66,6 +86,9 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTerceraOpcion = new javax.swing.JLabel();
+        lblSegundaOpcion = new javax.swing.JLabel();
+        lblPrimerOpcion = new javax.swing.JLabel();
         lblPregunta = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -75,6 +98,18 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        lblTerceraOpcion.setText("Tercer");
+        getContentPane().add(lblTerceraOpcion);
+        lblTerceraOpcion.setBounds(680, 1670, 77, 87);
+
+        lblSegundaOpcion.setText("Segundo Intento");
+        getContentPane().add(lblSegundaOpcion);
+        lblSegundaOpcion.setBounds(500, 1670, 77, 87);
+
+        lblPrimerOpcion.setText("Primer Intento");
+        getContentPane().add(lblPrimerOpcion);
+        lblPrimerOpcion.setBounds(320, 1670, 77, 87);
 
         lblPregunta.setFont(new java.awt.Font("Arabic Typesetting", 0, 24)); // NOI18N
         lblPregunta.setText("jLabel2");
@@ -127,7 +162,6 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         verificarRespuesta(jButton1, lblPregunta);
-        // verificarRespuesta(jButton1, lblPregunta);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -218,7 +252,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
                 hilo5.sleep(20);
                 lblPregunta.setBounds(i, 770, 390, 80);
             }
-             //ArrayRespuestas=tools.getData(data.Respuestas, 1, 0, 1);
+            //ArrayRespuestas=tools.getData(data.Respuestas, 1, 0, 1);
 
         } catch (Exception e) {
 
@@ -232,5 +266,8 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPregunta;
+    private javax.swing.JLabel lblPrimerOpcion;
+    private javax.swing.JLabel lblSegundaOpcion;
+    private javax.swing.JLabel lblTerceraOpcion;
     // End of variables declaration//GEN-END:variables
 }
