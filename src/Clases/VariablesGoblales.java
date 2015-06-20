@@ -11,6 +11,10 @@ package Clases;
  */
 public class VariablesGoblales {
     
-    public int idCategoria;
+    public static int idCategoria;
+    public static int intentos=0;
+    public static boolean primerIntento=false;
+    public static boolean segundoIntento=false;
+    public static boolean tercerIntento=false;
     
 }

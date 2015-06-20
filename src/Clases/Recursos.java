@@ -5,7 +5,10 @@
  */
 package Clases;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -104,16 +107,16 @@ public class Recursos {
     }
 
     public String getID(String[][] v, String dato, int posicionId) {
-     
-        String id="";
+
+        String id = "";
 
         for (int i = 0; i < v.length; i++) {
 
             for (int j = 0; j < v[i].length; j++) {
 
                 if (dato.equalsIgnoreCase(v[i][j])) {
-                       id=v[i][posicionId];
-                       break;
+                    id = v[i][posicionId];
+                    break;
                 }
 
             }
@@ -121,7 +124,65 @@ public class Recursos {
         }
         return id;
     }
-    
-    
+
+    public void verificarHaciertos(JLabel lblPrimerIntento, JLabel lblSegundoIntento, JLabel lblTercerIntento) {
+        
+         ImageIcon correcta = new ImageIcon(getClass().getResource("/Imagenes/correcto.png"));
+         ImageIcon incorrecta = new ImageIcon(getClass().getResource("/Imagenes/incorrecto.png"));
+         
+        if (VariablesGoblales.intentos == 0) {
+            lblPrimerIntento.hide();
+            lblSegundoIntento.hide();
+            lblTercerIntento.hide();
+        } else {
+
+            if (VariablesGoblales.intentos == 1) {
+                    lblSegundoIntento.hide();
+                    lblTercerIntento.hide();
+                if (VariablesGoblales.primerIntento) {
+                    lblPrimerIntento.setIcon(correcta);
+                } else {
+                    lblPrimerIntento.setIcon(incorrecta);
+                }
+
+            } else if ((VariablesGoblales.intentos == 2)) {
+                    lblTercerIntento.hide();
+                if (VariablesGoblales.segundoIntento) {
+                    lblSegundoIntento.setIcon(correcta);
+                } else {
+                    lblSegundoIntento.setIcon(incorrecta);
+                }
+                
+                if (VariablesGoblales.primerIntento) {
+                    lblPrimerIntento.setIcon(correcta);
+                } else {
+                    lblPrimerIntento.setIcon(incorrecta);
+                }
+
+            } else {
+                    
+                if (VariablesGoblales.tercerIntento) {
+                    lblTercerIntento.setIcon(correcta);
+                } else {
+                    lblTercerIntento.setIcon(incorrecta);
+                }
+                
+                if (VariablesGoblales.segundoIntento) {
+                    lblSegundoIntento.setIcon(correcta);
+                } else {
+                    lblSegundoIntento.setIcon(incorrecta);
+                }
+                
+                if (VariablesGoblales.primerIntento) {
+                    lblPrimerIntento.setIcon(correcta);
+                } else {
+                    lblPrimerIntento.setIcon(incorrecta);
+                }
+
+            }
+
+        }
+
+    }
 
 }

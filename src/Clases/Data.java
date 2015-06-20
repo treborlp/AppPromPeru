@@ -22,17 +22,8 @@ public class Data {
         {"1", "¿Cual es el plato bandera del Perú?", "1"},
         {"2", "¿Que Comida le gusta a Robert?", "1"},
         {"3", "¿Cual es el plato de comida favorito de Miguel Grau?", "1"},
-        
-       /* {"4", "¿Pregunta 1?", "1"},
-        {"5", "¿Pregunta 2?", "1"},
-        {"6", "¿Pregunta 3?", "1"},
-        {"7", "¿Pregunta 4?", "1"},
-        {"8", "¿Pregunta 5?", "1"},
-        {"9", "¿Pregunta 6?", "1"},*/
-        
-        
-        {"10", "¿Cual es el baile tipico de Trujillo?", "2"},
-        {"11", "¿Cual es el baile tipico de Ancash?", "2"}
+        {"4", "¿Cual es el baile tipico de Trujillo Cual es el baile tipico de Trujillo Cual es el baile tipico de Trujillo Cual es el baile tipico de Trujillo?", "2"},
+        {"5", "¿Cual es el baile tipico de Ancash?", "2"}
     
     };
 
@@ -52,15 +43,15 @@ public class Data {
         {"3", "Camaron de los dioces", "3"},
         {"3", "Respuesta 3.4", "0"},
             
-        {"10", "Respuesta 10.1", "0"},
-        {"10", "Respuesta 10.2", "0"},
-        {"10", "Respuesta 10.3", "0"},
-        {"10", "Marinera", "10"}, 
+        {"4", "Respuesta 10.1", "0"},
+        {"4", "Respuesta 10.2", "0"},
+        {"4", "Respuesta 10.3", "0"},
+        {"4", "Marinera", "10"}, 
         
-        {"11", "Respuesta 11.1", "0"},
-        {"11", "Respuesta 11.2", "0"},
-        {"11", "Huylas", "11"},
-        {"11", "Respuesta 11.4", "0"} 
+        {"5", "Respuesta 11.1", "0"},
+        {"5", "Respuesta 11.2", "0"},
+        {"5", "Huylas", "11"},
+        {"5", "Respuesta 11.4", "0"} 
             
             
     };

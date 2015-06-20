@@ -58,18 +58,22 @@
     <Component class="javax.swing.JLabel" name="lblPregunta">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arabic Typesetting" size="24" style="0"/>
+          <Font name="Tekton Pro" size="24" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
+        <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="480" y="770" width="390" height="80"/>
+          <AbsoluteConstraints x="200" y="560" width="760" height="290"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tekton Pro" size="72" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
       <Events>
@@ -77,12 +81,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="90" y="430" width="320" height="50"/>
+          <AbsoluteConstraints x="100" y="980" width="890" height="110"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tekton Pro" size="72" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jButton2"/>
       </Properties>
       <Events>
@@ -90,12 +97,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="90" y="500" width="320" height="50"/>
+          <AbsoluteConstraints x="100" y="1110" width="890" height="110"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tekton Pro" size="72" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jButton3"/>
       </Properties>
       <Events>
@@ -103,12 +113,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="90" y="570" width="320" height="50"/>
+          <AbsoluteConstraints x="100" y="1240" width="890" height="110"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tekton Pro" size="72" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jButton4"/>
       </Properties>
       <Events>
@@ -116,11 +129,11 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="90" y="640" width="320" height="50"/>
+          <AbsoluteConstraints x="100" y="1370" width="890" height="110"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="pnlText">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Imagenes/bgPreguntasGastro.jpg"/>

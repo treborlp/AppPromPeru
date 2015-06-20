@@ -34,20 +34,53 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
         inicio();
-        jButton1.setBounds(-320, 700, 320, 50);
-        jButton2.setBounds(-320, 800, 320, 50);
-        jButton3.setBounds(-320, 900, 320, 50);
-        jButton4.setBounds(-320, 1000, 320, 50);
-        lblPregunta.setBounds(-390, 770, 390, 80);
+        jButton1.setBounds(-990, 980, 890, 110);
+        jButton2.setBounds(-990, 1110, 890, 110);
+        jButton3.setBounds(-990, 1240, 890, 110);
+        jButton4.setBounds(-990, 1370, 890, 110);
+        lblPregunta.setBounds(-920, 560, 760, 230);
     }
+    
+    
 
     public void inicio() {
+        ocultarElementos();
         tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
-        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 1, 2, 1)));
+        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)));
+        //lblPregunta.setText("<html>"+ajustarTexto(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)))+"</html>");
         String pregunta = lblPregunta.getText();
         String idPregunta = tools.getID(data.Preguntas, pregunta, 0);
         String ArrayRespuestas[] = tools.getData(data.Respuestas, Integer.parseInt(idPregunta), 0, 1);
         tools.asignarNombresBotones(ArrayRespuestas, jButton1, jButton2, jButton3, jButton4);
+    }
+    
+    private  String ajustarTexto(String texto){
+        texto="";
+        
+        int i= texto.toCharArray().length;
+        
+        if(i>=60){
+               texto=texto.substring(0, 60)+"<br>"+texto.substring(60,i);
+        }
+        
+        return texto;
+   
+    }
+    
+    public void ocultarElementos(){
+        jButton1.hide();
+        jButton2.hide();
+        jButton3.hide();
+        jButton4.hide();
+        lblPregunta.hide();
+    }
+    
+    public void revelarElementos(){
+       jButton1.show();
+       jButton2.show();
+       jButton3.show();
+       jButton4.show();
+       lblPregunta.show();
     }
 
     public void verificarRespuesta(JButton btnRespuesta, JLabel lblPregunta) {
@@ -94,7 +127,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        pnlText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -111,11 +144,13 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(lblPrimerOpcion);
         lblPrimerOpcion.setBounds(320, 1670, 77, 87);
 
-        lblPregunta.setFont(new java.awt.Font("Arabic Typesetting", 0, 24)); // NOI18N
+        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
         lblPregunta.setText("jLabel2");
+        lblPregunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(lblPregunta);
-        lblPregunta.setBounds(480, 770, 390, 80);
+        lblPregunta.setBounds(200, 560, 760, 290);
 
+        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,8 +158,9 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(90, 430, 320, 50);
+        jButton1.setBounds(100, 980, 890, 110);
 
+        jButton2.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
         jButton2.setText("jButton2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,8 +168,9 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(90, 500, 320, 50);
+        jButton2.setBounds(100, 1110, 890, 110);
 
+        jButton3.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
         jButton3.setText("jButton3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,8 +178,9 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(90, 570, 320, 50);
+        jButton3.setBounds(100, 1240, 890, 110);
 
+        jButton4.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
         jButton4.setText("jButton4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,18 +188,20 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(90, 640, 320, 50);
+        jButton4.setBounds(100, 1370, 890, 110);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPreguntasGastro.jpg"))); // NOI18N
-        jLabel1.setAlignmentY(0.0F);
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1080, 1920);
+        pnlText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPreguntasGastro.jpg"))); // NOI18N
+        pnlText.setAlignmentY(0.0F);
+        getContentPane().add(pnlText);
+        pnlText.setBounds(0, 0, 1080, 1920);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        verificarRespuesta(jButton1, lblPregunta);
+      //verificarRespuesta(jButton1, lblPregunta);
+        //System.out.println("<html>xD</html>");
+       lblPregunta.setText("<html><p style='color:green; background:red ; width: 760px; height: 230px; text-align: center ; padding: 5px;'>Hola mama desde java hace mucho que no nos vemos por aqui ya debemos<br> de vernos mas seguido te parece seria genial </p></html>");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -231,26 +271,28 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
                     }
                 }
             }
+            
+            revelarElementos();
 
-            for (int i = 0; i < 400; i += 50) {
-                hilo1.sleep(30);
-                jButton1.setBounds(i, 430, 320, 50);
+            for (int i = 0; i < 101; i ++) {
+                hilo1.sleep(1);
+                jButton1.setBounds(i, 980, 890, 110);
             }
-            for (int i = 0; i < 400; i += 50) {
-                hilo2.sleep(20);
-                jButton2.setBounds(i, 500, 320, 50);
+            for (int i = 0; i < 101; i ++) {
+                hilo2.sleep(1);
+                jButton2.setBounds(i, 1110, 890, 110);
             }
-            for (int i = 0; i < 400; i += 50) {
-                hilo3.sleep(20);
-                jButton3.setBounds(i, 570, 320, 50);
+            for (int i = 0; i < 101; i ++) {
+                hilo3.sleep(1);
+                jButton3.setBounds(i, 1240, 890, 110);
             }
-            for (int i = 0; i < 400; i += 50) {
-                hilo4.sleep(20);
-                jButton4.setBounds(i, 640, 320, 50);
+            for (int i = 0; i < 101; i ++) {
+                hilo4.sleep(1);
+                jButton4.setBounds(i, 1370, 890, 110);
             }
-            for (int i = 0; i < 400; i += 50) {
-                hilo5.sleep(20);
-                lblPregunta.setBounds(i, 770, 390, 80);
+            for (int i = 0; i < 190; i ++) {
+                hilo5.sleep(1);
+                lblPregunta.setBounds(i, 560, 760, 230);
             }
             //ArrayRespuestas=tools.getData(data.Respuestas, 1, 0, 1);
 
@@ -264,10 +306,10 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblPrimerOpcion;
     private javax.swing.JLabel lblSegundaOpcion;
     private javax.swing.JLabel lblTerceraOpcion;
+    private javax.swing.JLabel pnlText;
     // End of variables declaration//GEN-END:variables
 }
