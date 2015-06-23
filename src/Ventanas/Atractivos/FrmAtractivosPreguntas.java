@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas.Gastronomia;
+package Ventanas.Atractivos;
 
+import Ventanas.Ciudades.*;
+import Ventanas.Gastronomia.*;
 import Clases.Data;
 import Clases.HiloCorrectoIncorrecto;
 import Clases.Recursos;
@@ -19,7 +21,7 @@ import Clases.VariablesGoblales;
  *
  * @author 4ser
  */
-public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
+public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnable {
 
     Thread hilo1, hilo2, hilo3, hilo4, hilo5;
     private int velocidad = 10, x = 280, y = 120;
@@ -28,7 +30,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
     // String ArrayRespuestas[] = {"Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4", "Respuesta 5", "Respuesta 6", "Respuesta 7", "Respuesta 8", "Respuesta 9", "Respuesta 10"};
     //tools.asignarNombresBotones(ArrayRespuestas, jButton1, jButton2, jButton3, jButton4);
-    public FrmGastroPreguntas() {
+    public FrmAtractivosPreguntas() {
         this.setUndecorated(true);
         initComponents();
         this.setSize(x, y);
@@ -44,7 +46,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     public void inicio() {
         ocultarElementos();
         tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
-        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 1, 2, 1)));
+        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 5, 2, 1)));
         //lblPregunta.setText("<html>"+ajustarTexto(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)))+"</html>");
         String pregunta = lblPregunta.getText();
         String idPregunta = tools.getID(data.Preguntas, pregunta, 0);
@@ -86,6 +88,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
         if (temp.equalsIgnoreCase(respuesta)) {
             btnRespuesta.setBackground(Color.green);
+
             HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmCorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
             VariablesGoblales.intentos++;
             if (VariablesGoblales.intentos == 1) {
@@ -97,10 +100,10 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             if (VariablesGoblales.intentos == 3) {
                 VariablesGoblales.tercerIntento = true;
             }
-            //System.out.println(VariablesGoblales.intentos);
-
+            System.out.println(VariablesGoblales.intentos);
         } else {
             btnRespuesta.setBackground(Color.red);
+            //System.out.println(idPregunta+"---"+idRespuesta);
             HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmIncorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
             VariablesGoblales.intentos++;
             // HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmIncorrecto(), this);
@@ -136,11 +139,11 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(lblPrimerOpcion);
         lblPrimerOpcion.setBounds(320, 1670, 77, 87);
 
-        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 60)); // NOI18N
+        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 58)); // NOI18N
         lblPregunta.setText("jLabel2");
         lblPregunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(lblPregunta);
-        lblPregunta.setBounds(200, 560, 760, 290);
+        lblPregunta.setBounds(200, 560, 760, 340);
 
         jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
         jButton1.setText("jButton1");
@@ -182,7 +185,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(jButton4);
         jButton4.setBounds(100, 1370, 890, 110);
 
-        pnlText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPreguntasGastro.jpg"))); // NOI18N
+        pnlText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPreguntaAtractivos.jpg"))); // NOI18N
         pnlText.setAlignmentY(0.0F);
         getContentPane().add(pnlText);
         pnlText.setBounds(0, 0, 1080, 1920);
@@ -225,20 +228,23 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmGastroPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmGastroPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmGastroPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmGastroPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Thread(new FrmGastroPreguntas()).start();
+                new Thread(new FrmAtractivosPreguntas()).start();
             }
         });
     }

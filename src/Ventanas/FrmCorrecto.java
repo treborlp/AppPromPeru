@@ -5,6 +5,9 @@
  */
 package Ventanas;
 
+import Ventanas.BailesTipicos.FrmBailesTipicosPreguntas;
+import Ventanas.Ciudades.FrmCiudadesPreguntas;
+import Ventanas.FrmFestividades.FrmFestiPreguntas;
 import Ventanas.Gastronomia.FrmGastroPreguntas;
 
 /**
@@ -54,7 +57,10 @@ public class FrmCorrecto extends javax.swing.JFrame {
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
        this.dispose();
-       new Thread(new FrmGastroPreguntas()).start();
+       //new Thread(new FrmGastroPreguntas()).start();
+       //new Thread(new FrmCiudadesPreguntas()).start();
+       //new Thread(new FrmBailesTipicosPreguntas()).start();
+       new Thread(new FrmFestiPreguntas()).start();
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     /**

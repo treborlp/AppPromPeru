@@ -40,7 +40,7 @@ public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
             }
         });
         getContentPane().add(btnJugar);
-        btnJugar.setBounds(280, 580, 210, 60);
+        btnJugar.setBounds(390, 780, 210, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgGastro.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
