@@ -46,7 +46,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     public void inicio() {
         ocultarElementos();
         tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
-        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)));
+        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 1, 2, 1)));
         //lblPregunta.setText("<html>"+ajustarTexto(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)))+"</html>");
         String pregunta = lblPregunta.getText();
         String idPregunta = tools.getID(data.Preguntas, pregunta, 0);
@@ -144,7 +144,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(lblPrimerOpcion);
         lblPrimerOpcion.setBounds(320, 1670, 77, 87);
 
-        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
+        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 60)); // NOI18N
         lblPregunta.setText("jLabel2");
         lblPregunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(lblPregunta);
@@ -199,9 +199,9 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      //verificarRespuesta(jButton1, lblPregunta);
+      verificarRespuesta(jButton1, lblPregunta);
         //System.out.println("<html>xD</html>");
-       lblPregunta.setText("<html><p style='color:green; background:red ; width: 760px; height: 230px; text-align: center ; padding: 5px;'>Hola mama desde java hace mucho que no nos vemos por aqui ya debemos<br> de vernos mas seguido te parece seria genial </p></html>");
+     //  lblPregunta.setText("<html><p style='color:green; background:red ; width: 760px; height: 230px; text-align: center ; padding: 5px;'>Hola mama desde java hace mucho que no nos vemos por aqui ya debemos<br> de vernos mas seguido te parece seria genial </p></html>");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

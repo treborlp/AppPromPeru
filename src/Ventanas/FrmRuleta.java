@@ -5,10 +5,18 @@
  */
 package Ventanas;
 
+import Clases.HiloGirarRuleta;
 import Ventanas.Gastronomia.FrmGastronomia;
+import java.awt.Color;
+import java.awt.Insets;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+import javax.swing.border.MatteBorder;
 
 /**
  *
@@ -18,6 +26,7 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
 
     Thread hilo1, hilo2;
     private int velocidad = 10, x = 280, y = 120;
+
     /**
      * Creates new form FrmRuleta
      */
@@ -27,6 +36,62 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
         this.setSize(x, y);
         btnGirar.setVisible(false);
         this.setLocationRelativeTo(null);
+        ocultarElementos();
+
+    }
+
+    private void ocultarElementos() {
+        jButton1.hide();
+        jButton2.hide();
+        jButton3.hide();
+        jButton4.hide();
+        jButton5.hide();
+        jButton6.hide();
+        jButton7.hide();
+        jButton8.hide();
+        jButton9.hide();
+        jButton10.hide();
+    }
+
+    private void mostrarElementos() {
+        jButton1.show();
+        jButton2.show();
+        jButton3.show();
+        jButton4.show();
+        jButton5.show();
+        jButton6.show();
+        jButton7.show();
+        jButton8.show();
+        jButton9.show();
+        jButton10.show();
+    }
+
+    private void empezar() {
+        ImageIcon iconBorde = new ImageIcon(getClass().getResource("/Imagenes/Icono.png"));
+        Border borde = new MatteBorder(32, 32, 32, 32, iconBorde);
+        //javax.swing.border.MatteBorder@215e0a75
+
+        if (jButton1.getBorder().getClass() == borde.getClass()) {
+            //
+        } else if (jButton2.getBorder().getClass() == borde.getClass()) {
+            //
+        } else if (jButton3.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton4.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton5.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton6.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton7.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton8.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton9.getBorder().getClass() == borde.getClass()) {
+
+        } else if (jButton10.getBorder().getClass() == borde.getClass()) {
+
+        }
 
     }
 
@@ -39,6 +104,17 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnEmpezar = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         btnGirar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -46,14 +122,87 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
         setAlwaysOnTop(true);
         getContentPane().setLayout(null);
 
-        btnGirar.setText("Girar");
+        btnEmpezar.setText("Empezar");
+        btnEmpezar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmpezarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEmpezar);
+        btnEmpezar.setBounds(460, 860, 200, 90);
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        getContentPane().add(jButton10);
+        jButton10.setBounds(760, 840, 224, 224);
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        getContentPane().add(jButton9);
+        jButton9.setBounds(760, 1140, 224, 224);
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        getContentPane().add(jButton8);
+        jButton8.setBounds(760, 1440, 224, 224);
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        getContentPane().add(jButton7);
+        jButton7.setBounds(450, 1440, 224, 224);
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        getContentPane().add(jButton6);
+        jButton6.setBounds(140, 1440, 224, 224);
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        getContentPane().add(jButton5);
+        jButton5.setBounds(140, 1140, 224, 224);
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(140, 850, 224, 224);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(760, 550, 224, 224);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(450, 550, 224, 224);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imgTest.jpg"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(140, 550, 224, 224);
+
+        btnGirar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnAmarillo.png"))); // NOI18N
+        btnGirar.setBorder(null);
+        btnGirar.setBorderPainted(false);
+        btnGirar.setContentAreaFilled(false);
+        btnGirar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGirar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGirarActionPerformed(evt);
             }
         });
         getContentPane().add(btnGirar);
-        btnGirar.setBounds(360, 880, 340, 240);
+        btnGirar.setBounds(430, 1020, 270, 150);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgRuleta.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -63,10 +212,42 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // 
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+        // Border thickBorder = new LineBorder(Color.red, 30);
+        ImageIcon iconBorde = new ImageIcon(getClass().getResource("/Imagenes/Icono.png"));
+        Border borde = new MatteBorder(32, 32, 32, 32, iconBorde);
+        jButton3.setBorder(borde);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        //JOptionPane.showMessageDialog(this, "ENLACE");
+        JOptionPane.showMessageDialog(this, "ENLACE");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     private void btnGirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGirarActionPerformed
-        this.dispose();
-        new Thread(new FrmGastronomia()).start();
+        /* this.dispose();
+         new Thread(new FrmGastronomia()).start();*/
+        HiloGirarRuleta Hilo = new HiloGirarRuleta(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jButton10);
+
+        //int)58/11+"*11 "+" + "+58%11
+
+        /* ImageIcon iconBorde = new ImageIcon(getClass().getResource("/Imagenes/Icono.png"));
+         Border borde = new MatteBorder(32, 32, 32, 32, iconBorde);
+         jButton1.setBorder(borde);*/
     }//GEN-LAST:event_btnGirarActionPerformed
+
+    private void btnEmpezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpezarActionPerformed
+
+    }//GEN-LAST:event_btnEmpezarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,7 +293,7 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
                 this.setSize(x, y);
                 this.setLocationRelativeTo(null);
                 x = x + 100;
-              //  System.out.println(this.getSize().width);
+                //  System.out.println(this.getSize().width);
 
                 if (x == 1080) {
                     for (int j = 0; j < 76; j++) {
@@ -120,11 +301,11 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
                         this.setSize(x, y);
                         this.setLocationRelativeTo(null);
                         y = y + 25;
-                        System.out.println(this.getSize().height);
+                        //System.out.println(this.getSize().height);
                     }
-                } 
+                }
             }
-            
+            mostrarElementos();
             btnGirar.setVisible(true);
         } catch (Exception e) {
 
@@ -132,7 +313,18 @@ public class FrmRuleta extends javax.swing.JFrame implements Runnable {
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEmpezar;
     private javax.swing.JButton btnGirar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
