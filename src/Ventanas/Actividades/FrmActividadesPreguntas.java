@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas.Atractivos;
+package Ventanas.Actividades;
 
+import Ventanas.AreaNatural.*;
+import Ventanas.Atractivos.*;
 import Ventanas.Ciudades.*;
 import Ventanas.Gastronomia.*;
 import Clases.Data;
@@ -21,7 +23,7 @@ import Clases.VariablesGoblales;
  *
  * @author 4ser
  */
-public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnable {
+public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runnable {
 
     Thread hilo1, hilo2, hilo3, hilo4, hilo5;
     private int velocidad = 10, x = 280, y = 120;
@@ -30,7 +32,7 @@ public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnab
 
     // String ArrayRespuestas[] = {"Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4", "Respuesta 5", "Respuesta 6", "Respuesta 7", "Respuesta 8", "Respuesta 9", "Respuesta 10"};
     //tools.asignarNombresBotones(ArrayRespuestas, jButton1, jButton2, jButton3, jButton4);
-    public FrmAtractivosPreguntas() {
+    public FrmActividadesPreguntas() {
         this.setUndecorated(true);
         initComponents();
         this.setSize(x, y);
@@ -46,7 +48,7 @@ public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnab
     public void inicio() {
         ocultarElementos();
         tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
-        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 5, 2, 1)));
+        lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 8, 2, 1)));
         //lblPregunta.setText("<html>"+ajustarTexto(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)))+"</html>");
         String pregunta = lblPregunta.getText();
         String idPregunta = tools.getID(data.Preguntas, pregunta, 0);
@@ -186,7 +188,7 @@ public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnab
         getContentPane().add(jButton4);
         jButton4.setBounds(100, 1370, 890, 110);
 
-        pnlText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPreguntaAtractivos.jpg"))); // NOI18N
+        pnlText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPreguntaActividades.jpg"))); // NOI18N
         pnlText.setAlignmentY(0.0F);
         getContentPane().add(pnlText);
         pnlText.setBounds(0, 0, 1080, 1920);
@@ -229,14 +231,26 @@ public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnab
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActividadesPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActividadesPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActividadesPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivosPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActividadesPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -245,7 +259,7 @@ public class FrmAtractivosPreguntas extends javax.swing.JFrame implements Runnab
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Thread(new FrmAtractivosPreguntas()).start();
+                new Thread(new FrmActividadesPreguntas()).start();
             }
         });
     }

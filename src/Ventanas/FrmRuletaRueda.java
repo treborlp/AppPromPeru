@@ -5,6 +5,9 @@
  */
 package Ventanas;
 
+import Clases.HiloRotar;
+import Clases.VariablesGoblales;
+
 /**
  *
  * @author 4ser
@@ -18,6 +21,15 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
         this.setUndecorated(true);
         initComponents();
         this.setLocationRelativeTo(null);
+        //HiloRotar Hilo = new HiloRotar(this);
+    }
+
+    private void iniciar() {
+        int temp = (int) Math.floor((Math.random() * 10) + 1) * 100;
+        VariablesGoblales.ruleta = temp;
+        HiloRotar Hilo = new HiloRotar(this, temp);
+        System.out.println(temp);
+
     }
 
     /**
@@ -29,12 +41,22 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
+
+        jButton1.setText("Girar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(240, 300, 640, 180);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgRuleta.jpg"))); // NOI18N
         jLabel1.setAlignmentY(0.0F);
@@ -43,6 +65,10 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        iniciar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,6 +106,7 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

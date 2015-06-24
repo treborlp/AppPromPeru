@@ -9,18 +9,17 @@ import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 
 
-/**
- *
- * @author 4ser
- */
-public class FrmPrincipal extends javax.swing.JFrame  implements Runnable{
+public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     private Thread hilo1, hilo2;
-    private int velocidad = 10, x = 280, y = 120;
-    
+    HiloSonido playSonidoInicial;
+    //private int velocidad = 10, x = 280, y = 120;
+    private int x = 1080, y = 1920;
+
     public FrmPrincipal() {
         this.setUndecorated(true);
         initComponents();
+        playSonidoInicial= new HiloSonido("SonidoInicial.mp3",true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
         btnTest.setVisible(false);
@@ -33,10 +32,7 @@ public class FrmPrincipal extends javax.swing.JFrame  implements Runnable{
 
     }
 
-    private void playSong() {
-        HiloSonido play=new HiloSonido();
-    }
-
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,7 +43,6 @@ public class FrmPrincipal extends javax.swing.JFrame  implements Runnable{
     private void initComponents() {
 
         btnTest = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -55,25 +50,28 @@ public class FrmPrincipal extends javax.swing.JFrame  implements Runnable{
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
 
-        btnTest.setText("Test");
+        btnTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPeru-Inicio.jpg"))); // NOI18N
+        btnTest.setBorder(null);
+        btnTest.setBorderPainted(false);
+        btnTest.setContentAreaFilled(false);
+        btnTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTest.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgnMain.jpg"))); // NOI18N
+        btnTest.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPeru-Hover.jpg"))); // NOI18N
         btnTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTestActionPerformed(evt);
             }
         });
         getContentPane().add(btnTest);
-        btnTest.setBounds(290, 930, 410, 100);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgnMain.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1080, 1920);
+        btnTest.setBounds(0, 0, 1080, 1920);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
-        //playSong();
+       // playSong();
         this.dispose();
+        playSonidoInicial.close();
         new Thread(new FrmRuleta()).start();
     }//GEN-LAST:event_btnTestActionPerformed
 
@@ -112,36 +110,35 @@ public class FrmPrincipal extends javax.swing.JFrame  implements Runnable{
             }
         });
     }
-    
-    public void run(){
+
+    public void run() {
         try {
             this.setVisible(true);
-            for (int i = 0; i < 9; i++) {
-                hilo1.sleep(velocidad);
-                this.setSize(x, y);
-                this.setLocationRelativeTo(null);
-                x = x + 100;
-              //  System.out.println(this.getSize().width);
+            /*for (int i = 0; i < 9; i++) {
+             hilo1.sleep(velocidad);
+             this.setSize(x, y);
+             this.setLocationRelativeTo(null);
+             x = x + 100;
+             //  System.out.println(this.getSize().width);
 
-                if (x == 1080) {
-                    for (int j = 0; j < 76; j++) {
-                        hilo2.sleep(velocidad);
-                        this.setSize(x, y);
-                        this.setLocationRelativeTo(null);
-                        y = y + 25;
-                        System.out.println(this.getSize().height);
-                    }
-                } 
-            }
+             if (x == 1080) {
+             for (int j = 0; j < 76; j++) {
+             hilo2.sleep(velocidad);
+             this.setSize(x, y);
+             this.setLocationRelativeTo(null);
+             y = y + 25;
+             System.out.println(this.getSize().height);
+             }
+             } 
+             }*/
             btnTest.setVisible(true);
         } catch (Exception e) {
 
         }
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTest;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

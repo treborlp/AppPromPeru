@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas.AreaNatural;
+package Ventanas.ComunidadesNativas;
+
+import Ventanas.AreaNatural.*;
 
 /**
  *
  * @author 4ser
  */
-public class FrmAreaNatural extends javax.swing.JFrame {
+public class FrmComunidadNativa extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmAreaNatural
      */
-    public FrmAreaNatural() {
+    public FrmComunidadNativa() {
         this.setUndecorated(true);
         initComponents();
         this.setLocationRelativeTo(null);
@@ -33,7 +35,6 @@ public class FrmAreaNatural extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
 
         jButton1.setText("jButton1");
@@ -45,7 +46,7 @@ public class FrmAreaNatural extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(250, 580, 520, 150);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgAreasNat.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgComNat.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1080, 1920);
 
@@ -54,7 +55,7 @@ public class FrmAreaNatural extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        this.dispose();
-       new Thread(new FrmAreaNaturalPreguntas()).start();
+       new Thread(new FrmComunidadNativaPreguntas()).start();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -74,20 +75,21 @@ public class FrmAreaNatural extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmAreaNatural.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComunidadNativa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmAreaNatural.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComunidadNativa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmAreaNatural.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComunidadNativa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmAreaNatural.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComunidadNativa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmAreaNatural().setVisible(true);
+                new FrmComunidadNativa().setVisible(true);
             }
         });
     }

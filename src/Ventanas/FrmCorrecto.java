@@ -4,11 +4,9 @@
  * and open the template in the editor.
  */
 package Ventanas;
+import Clases.VariablesGoblales;
 
-import Ventanas.BailesTipicos.FrmBailesTipicosPreguntas;
-import Ventanas.Ciudades.FrmCiudadesPreguntas;
-import Ventanas.FrmFestividades.FrmFestiPreguntas;
-import Ventanas.Gastronomia.FrmGastroPreguntas;
+
 
 /**
  *
@@ -25,6 +23,49 @@ public class FrmCorrecto extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
+    private void Continuar(){
+        this.dispose();
+        int temp= VariablesGoblales.ruleta;
+        switch (temp) {
+                        case 100:
+                            
+                            break;
+                        case 200:
+                            
+                            break;
+                        case 300:
+                            
+                            break;
+                        case 400:
+                            
+                            break;
+                        case 500:
+                            
+                            break;
+                        case 600:
+                            
+                            break;
+                        case 700:
+                            
+                            break;
+                        case 800:
+                           
+                            break;
+                        case 900:
+                           
+                            break;
+                        case 1000:
+                            
+                            break;
+
+                        default:
+
+                            break;
+                    }
+    
+    
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -56,11 +97,11 @@ public class FrmCorrecto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-       this.dispose();
+        this.dispose();
        //new Thread(new FrmGastroPreguntas()).start();
-       //new Thread(new FrmCiudadesPreguntas()).start();
-       //new Thread(new FrmBailesTipicosPreguntas()).start();
-       new Thread(new FrmFestiPreguntas()).start();
+        //new Thread(new FrmCiudadesPreguntas()).start();
+        //new Thread(new FrmBailesTipicosPreguntas()).start();
+        //new Thread(new FrmFestiPreguntas()).start();
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     /**

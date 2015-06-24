@@ -17,4 +17,6 @@ public class VariablesGoblales {
     public static boolean segundoIntento=false;
     public static boolean tercerIntento=false;
     
+    public static int ruleta;
+    
 }
