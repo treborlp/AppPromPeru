@@ -4,9 +4,26 @@
  * and open the template in the editor.
  */
 package Ventanas;
+
 import Clases.VariablesGoblales;
-
-
+import Ventanas.Actividades.FrmActividades;
+import Ventanas.Actividades.FrmActividadesPreguntas;
+import Ventanas.AreaNatural.FrmAreaNatural;
+import Ventanas.AreaNatural.FrmAreaNaturalPreguntas;
+import Ventanas.Atractivos.FrmAtractivos;
+import Ventanas.Atractivos.FrmAtractivosPreguntas;
+import Ventanas.BailesTipicos.FrmBailesTipicos;
+import Ventanas.BailesTipicos.FrmBailesTipicosPreguntas;
+import Ventanas.Ciudades.FrmCiudades;
+import Ventanas.Ciudades.FrmCiudadesPreguntas;
+import Ventanas.Comodin.FrmComodin;
+import Ventanas.ComunidadesNativas.FrmComunidadNativa;
+import Ventanas.ComunidadesNativas.FrmComunidadNativaPreguntas;
+import Ventanas.FrmFestividades.FrmFestiPreguntas;
+import Ventanas.FrmFestividades.FrmFestividades;
+import Ventanas.Gastronomia.FrmGastroPreguntas;
+import Ventanas.Gastronomia.FrmGastronomia;
+import javax.swing.JFrame;
 
 /**
  *
@@ -17,53 +34,205 @@ public class FrmCorrecto extends javax.swing.JFrame {
     /**
      * Creates new form FrmCorrecto
      */
+    HiloSonido playSonidoInicial;
+
     public FrmCorrecto() {
         this.setUndecorated(true);
         initComponents();
+        playSonidoInicial = new HiloSonido("SonidoInicial.mp3", true);
         this.setLocationRelativeTo(null);
     }
-    
-    private void Continuar(){
-        this.dispose();
-        int temp= VariablesGoblales.ruleta;
-        switch (temp) {
-                        case 100:
-                            
-                            break;
-                        case 200:
-                            
-                            break;
-                        case 300:
-                            
-                            break;
-                        case 400:
-                            
-                            break;
-                        case 500:
-                            
-                            break;
-                        case 600:
-                            
-                            break;
-                        case 700:
-                            
-                            break;
-                        case 800:
-                           
-                            break;
-                        case 900:
-                           
-                            break;
-                        case 1000:
-                            
-                            break;
 
-                        default:
+    private void verificarPremio() {
+        if (VariablesGoblales.primerIntento && VariablesGoblales.segundoIntento && VariablesGoblales.tercerIntento) {
 
-                            break;
-                    }
-    
-    
+        } else if (VariablesGoblales.primerIntento && VariablesGoblales.segundoIntento) {
+
+        } else if (VariablesGoblales.primerIntento && VariablesGoblales.tercerIntento) {
+
+        } else if (VariablesGoblales.segundoIntento && VariablesGoblales.tercerIntento) {
+
+        } else {
+
+        }
+
+    }
+
+    private void Continuar(JFrame frame, int aleatorio) {
+
+        int temp = VariablesGoblales.ruleta;
+        switch (aleatorio) {
+            case 100:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmAreaNatural().show();
+                    new Thread(new FrmAreaNaturalPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 200:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmAtractivos().show();
+                    new Thread(new FrmAtractivosPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+
+            case 300:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    new FrmComodin().show();
+                    frame.dispose();
+                    break;
+                }
+            case 400:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmFestividades().show();
+                    new Thread(new FrmFestiPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 500:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    new Thread(new FrmGastroPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 600:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmCiudades().show();
+                    new Thread(new FrmCiudadesPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 700:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    new FrmComodin().show();
+                    frame.dispose();
+                    break;
+                }
+            case 800:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmComunidadNativa().show();
+                    new Thread(new FrmComunidadNativaPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 900:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmActividades().show();
+                    new Thread(new FrmActividadesPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 1000:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmAtractivos().show();
+                    new Thread(new FrmAtractivosPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 1100:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    new FrmComodin().show();
+                    frame.dispose();
+                    break;
+                }
+            case 1200:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmFestividades().show();
+                    new Thread(new FrmFestiPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+            case 1300:
+                if (VariablesGoblales.intentos == 3) {
+                    playSonidoInicial.close();
+                    verificarPremio();
+                    System.out.println("Se acabo el Juego");
+                    break;
+                } else {
+                    playSonidoInicial.close();
+                    //new FrmBailesTipicos().show();
+                    new Thread(new FrmBailesTipicosPreguntas()).start();
+                    frame.dispose();
+                    break;
+                }
+
+            default:
+
+                break;
+        }
+
     }
 
     @SuppressWarnings("unchecked")
@@ -79,15 +248,19 @@ public class FrmCorrecto extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btnContinuar.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
-        btnContinuar.setText("Continuar");
-        btnContinuar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnContinuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnContinuarGif.gif"))); // NOI18N
+        btnContinuar.setBorder(null);
+        btnContinuar.setBorderPainted(false);
+        btnContinuar.setContentAreaFilled(false);
+        btnContinuar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnContinuar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnContinuarGif.gif"))); // NOI18N
         btnContinuar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnContinuarActionPerformed(evt);
             }
         });
         getContentPane().add(btnContinuar);
-        btnContinuar.setBounds(240, 1650, 640, 170);
+        btnContinuar.setBounds(280, 1680, 490, 160);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgCorrecta.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -97,11 +270,7 @@ public class FrmCorrecto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-        this.dispose();
-       //new Thread(new FrmGastroPreguntas()).start();
-        //new Thread(new FrmCiudadesPreguntas()).start();
-        //new Thread(new FrmBailesTipicosPreguntas()).start();
-        //new Thread(new FrmFestiPreguntas()).start();
+        Continuar(this, VariablesGoblales.ruleta);
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     /**

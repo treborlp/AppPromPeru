@@ -15,6 +15,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import Clases.VariablesGoblales;
+import Ventanas.HiloSonido;
 
 /**
  *
@@ -26,12 +27,18 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
     private int velocidad = 10, x = 280, y = 120;
     Recursos tools = new Recursos();
     Data data = new Data();
+    HiloSonido playSonidoAccion;
+    HiloSonido playBoton;
+    
+    HiloSonido playSonidoCorrecto;
+    HiloSonido playSonidoIncorrecto;
 
     // String ArrayRespuestas[] = {"Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4", "Respuesta 5", "Respuesta 6", "Respuesta 7", "Respuesta 8", "Respuesta 9", "Respuesta 10"};
     //tools.asignarNombresBotones(ArrayRespuestas, jButton1, jButton2, jButton3, jButton4);
     public FrmCiudadesPreguntas() {
         this.setUndecorated(true);
         initComponents();
+        playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
         inicio();
@@ -86,6 +93,7 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
         }
 
         if (temp.equalsIgnoreCase(respuesta)) {
+            playSonidoCorrecto= new HiloSonido("SonidoRespCorrecta.mp3",false);
             btnRespuesta.setBackground(Color.green);
 
             HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmCorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
@@ -101,6 +109,7 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
             }
             System.out.println(VariablesGoblales.intentos);
         } else {
+            playSonidoIncorrecto= new HiloSonido("SonidoRespIncorrecta.mp3",false);
             btnRespuesta.setBackground(Color.red);
             //System.out.println(idPregunta+"---"+idRespuesta);
             HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmIncorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
@@ -194,21 +203,27 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton1, lblPregunta);
-        //System.out.println("<html>xD</html>");
-        //  lblPregunta.setText("<html><p style='color:green; background:red ; width: 760px; height: 230px; text-align: center ; padding: 5px;'>Hola mama desde java hace mucho que no nos vemos por aqui ya debemos<br> de vernos mas seguido te parece seria genial </p></html>");
+        playSonidoAccion.close();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton2, lblPregunta);
+        playSonidoAccion.close();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton3, lblPregunta);
+        playSonidoAccion.close();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton4, lblPregunta);
+        playSonidoAccion.close();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -258,11 +273,11 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
                 //  System.out.println(this.getSize().width);
 
                 if (x == 1080) {
-                    for (int j = 0; j < 76; j++) {
+                    for (int j = 0; j < 19; j++) {
                         hilo2.sleep(velocidad);
                         this.setSize(x, y);
                         this.setLocationRelativeTo(null);
-                        y = y + 25;
+                        y = y + 100;
                         //System.out.println(this.getSize().height);
                     }
                 }

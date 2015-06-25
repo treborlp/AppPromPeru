@@ -13,6 +13,7 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     private Thread hilo1, hilo2;
     HiloSonido playSonidoInicial;
+    HiloSonido playBoton;
     //private int velocidad = 10, x = 280, y = 120;
     private int x = 1080, y = 1920;
 
@@ -43,36 +44,43 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
     private void initComponents() {
 
         btnTest = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(240, 23, 226));
         setPreferredSize(new java.awt.Dimension(1080, 1920));
+        setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
 
-        btnTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPeru-Inicio.jpg"))); // NOI18N
+        btnTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPrincipalGif.gif"))); // NOI18N
         btnTest.setBorder(null);
         btnTest.setBorderPainted(false);
         btnTest.setContentAreaFilled(false);
         btnTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnTest.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgnMain.jpg"))); // NOI18N
-        btnTest.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPeru-Hover.jpg"))); // NOI18N
+        btnTest.setPreferredSize(null);
+        btnTest.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPrincipalGif.gif"))); // NOI18N
         btnTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTestActionPerformed(evt);
             }
         });
         getContentPane().add(btnTest);
-        btnTest.setBounds(0, 0, 1080, 1920);
+        btnTest.setBounds(110, 460, 810, 1130);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgPrincipalSolo.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1080, 1920);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
        // playSong();
-        this.dispose();
+        playBoton= new HiloSonido("SonidoClick.mp3",false);
         playSonidoInicial.close();
-        new Thread(new FrmRuleta()).start();
+        new FrmRuletaRueda().show();
+        this.dispose();
     }//GEN-LAST:event_btnTestActionPerformed
 
     /**
@@ -140,5 +148,6 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTest;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

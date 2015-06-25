@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas.Atractivos;
+package Ventanas.Comodin;
 
 import Ventanas.HiloSonido;
 
@@ -11,18 +11,16 @@ import Ventanas.HiloSonido;
  *
  * @author 4ser
  */
-public class FrmAtractivos extends javax.swing.JFrame {
+public class FrmComodin extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmAtractivos
+     * Creates new form FrmComodin
      */
-    HiloSonido playSonidoAccion;
-    HiloSonido playBoton;
-
-    public FrmAtractivos() {
+    HiloSonido playSonidoComodin;
+    public FrmComodin() {
         this.setUndecorated(true);
         initComponents();
-        playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
+        playSonidoComodin= new HiloSonido("SonidoAccion.mp3",true);
         this.setLocationRelativeTo(null);
     }
 
@@ -43,12 +41,12 @@ public class FrmAtractivos extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnJugarGif.gif"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnContinuarGif.gif"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnJugarGif.gif"))); // NOI18N
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnContinuarGif.gif"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -57,7 +55,7 @@ public class FrmAtractivos extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(280, 1680, 490, 160);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgAtractivos.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgComodin.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1080, 1920);
 
@@ -65,11 +63,7 @@ public class FrmAtractivos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        playBoton = new HiloSonido("SonidoClick.mp3", false);
-        this.dispose();
-        playSonidoAccion.close();
-        new Thread(new FrmAtractivosPreguntas()).start();
-        //new FrmAtractivosPreguntas().show();
+       playSonidoComodin.close();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -89,20 +83,20 @@ public class FrmAtractivos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComodin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComodin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComodin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmAtractivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmComodin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmAtractivos().setVisible(true);
+                new FrmComodin().setVisible(true);
             }
         });
     }

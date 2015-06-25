@@ -5,6 +5,8 @@
  */
 package Ventanas.Gastronomia;
 
+import Ventanas.HiloSonido;
+
 /**
  *
  * @author 4ser
@@ -13,10 +15,13 @@ public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
 
     Thread hilo1, hilo2;
     private int velocidad = 10, x = 280, y = 120;
+    HiloSonido playSonidoAccion;
+    HiloSonido playBoton;
 
     public FrmGastronomia() {
         this.setUndecorated(true);
         initComponents();
+        playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
         this.setSize(x, y);
         btnJugar.setVisible(false);
         this.setLocationRelativeTo(null);
@@ -30,17 +35,23 @@ public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1080, 1920));
         setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
 
-        btnJugar.setText("Jugar");
+        btnJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnJugarGif.gif"))); // NOI18N
+        btnJugar.setBorder(null);
+        btnJugar.setBorderPainted(false);
+        btnJugar.setContentAreaFilled(false);
+        btnJugar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnJugar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnJugarGif.gif"))); // NOI18N
         btnJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJugarActionPerformed(evt);
             }
         });
         getContentPane().add(btnJugar);
-        btnJugar.setBounds(390, 780, 210, 60);
+        btnJugar.setBounds(280, 1680, 490, 160);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgGastro.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -53,7 +64,9 @@ public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarActionPerformed
+        playBoton = new HiloSonido("SonidoClick.mp3", false);
         this.dispose();
+        playSonidoAccion.close();
         new Thread(new FrmGastroPreguntas()).start();
     }//GEN-LAST:event_btnJugarActionPerformed
 
@@ -113,10 +126,9 @@ public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
                     }
                 }
             }
-            
-            btnJugar.setBounds((int)((this.getSize().width-300)/2), 500, 300, 300);
+
+            //btnJugar.setBounds((int) ((this.getSize().width - 300) / 2), 500, 300, 300);
             btnJugar.setVisible(true);
-            
 
         } catch (Exception e) {
 

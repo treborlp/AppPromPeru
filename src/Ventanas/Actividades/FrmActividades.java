@@ -6,6 +6,7 @@
 package Ventanas.Actividades;
 
 import Ventanas.AreaNatural.*;
+import Ventanas.HiloSonido;
 
 /**
  *
@@ -15,10 +16,14 @@ public class FrmActividades extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmAreaNatural
+     * 
      */
+    HiloSonido playSonidoAccion;
+    HiloSonido playBoton;
     public FrmActividades() {
         this.setUndecorated(true);
         initComponents();
+        playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
         this.setLocationRelativeTo(null);
     }
 
@@ -39,14 +44,19 @@ public class FrmActividades extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton1.setText("jButton1");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnJugarGif.gif"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnJugarGif.gif"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(250, 580, 520, 150);
+        jButton1.setBounds(280, 1680, 490, 160);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgActividades.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -56,7 +66,10 @@ public class FrmActividades extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       playBoton= new HiloSonido("SonidoClick.mp3",false);
+       //playBoton.close();
        this.dispose();
+       playSonidoAccion.close();
        new Thread(new FrmActividadesPreguntas()).start();
     }//GEN-LAST:event_jButton1ActionPerformed
 

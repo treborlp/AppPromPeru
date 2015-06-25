@@ -17,15 +17,22 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     /**
      * Creates new form FrmRuletaRueda
      */
+    
+    HiloSonido playSonidoInicial;
+    
+    
     public FrmRuletaRueda() {
         this.setUndecorated(true);
         initComponents();
+        playSonidoInicial= new HiloSonido("SonidoInicial.mp3",true);
         this.setLocationRelativeTo(null);
         //HiloRotar Hilo = new HiloRotar(this);
     }
 
     private void iniciar() {
-        int temp = (int) Math.floor((Math.random() * 10) + 1) * 100;
+        playSonidoInicial.close();
+        //playSonidoRuleta=new HiloSonido("SonidoRuleta.mp3", false);
+        int temp = (int) Math.floor((Math.random() * 13) + 1) * 100;
         VariablesGoblales.ruleta = temp;
         HiloRotar Hilo = new HiloRotar(this, temp);
         System.out.println(temp);
@@ -49,14 +56,18 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
 
-        jButton1.setText("Girar");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnGirar.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(240, 300, 640, 180);
+        jButton1.setBounds(390, 890, 291, 290);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgRuleta.jpg"))); // NOI18N
         jLabel1.setAlignmentY(0.0F);
@@ -68,6 +79,7 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         iniciar();
+        jButton1.hide();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

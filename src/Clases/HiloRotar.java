@@ -6,6 +6,15 @@
 package Clases;
 
 import Ventanas.Actividades.FrmActividades;
+import Ventanas.AreaNatural.FrmAreaNatural;
+import Ventanas.Atractivos.FrmAtractivos;
+import Ventanas.BailesTipicos.FrmBailesTipicos;
+import Ventanas.Ciudades.FrmCiudades;
+import Ventanas.Comodin.FrmComodin;
+import Ventanas.ComunidadesNativas.FrmComunidadNativa;
+import Ventanas.FrmFestividades.FrmFestividades;
+import Ventanas.Gastronomia.FrmGastronomia;
+import Ventanas.HiloSonido;
 import com.sun.glass.events.ViewEvent;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -24,6 +33,7 @@ public class HiloRotar implements Runnable {
     JFrame frame;
     Thread t;
     private BufferedImage slate;
+    HiloSonido playSonidoRuleta;
 
     private Image dbImage;
     private Graphics dbg;
@@ -33,6 +43,7 @@ public class HiloRotar implements Runnable {
         this.frame = frame;
         this.aleatorio = aleatorio;
         t = new Thread(this, "Hilo Rotar");
+        playSonidoRuleta = new HiloSonido("SonidoRuleta2.mp3", true);
         t.start();
 
     }
@@ -68,73 +79,88 @@ public class HiloRotar implements Runnable {
                 i++;
                 if (j < 100) {
                     j++;
-                } else if (j < 1000) {
+                } else if (j < 1300) {
                     j += 100;
                     // System.out.println(j);
                 }
 
                 // System.out.println(j);
                 if (j == aleatorio) {
-                    Thread.sleep(5000);
-                    
-                    
+                    playSonidoRuleta.close();
+                    Thread.sleep(3000);
+
                     switch (aleatorio) {
                         case 100:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmAreaNatural().show();
                             break;
                         case 200:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmAtractivos().show();
                             break;
                         case 300:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmComodin().show();
                             break;
                         case 400:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmFestividades().show();
                             break;
                         case 500:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new Thread(new FrmGastronomia()).start();
                             break;
                         case 600:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmCiudades().show();
                             break;
                         case 700:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmComodin().show();
                             break;
                         case 800:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmComunidadNativa().show();
                             break;
                         case 900:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
                             new FrmActividades().show();
                             break;
                         case 1000:
-                            System.out.println("Avanzo al Frame:" +aleatorio);
+                            System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new FrmActividades().show();
+                            new FrmAtractivos().show();
+                            break;
+                        case 1100:
+                            System.out.println("Avanzo al Frame:" + aleatorio);
+                            frame.dispose();
+                            new FrmComodin().show();
+                            break;
+                        case 1200:
+                            System.out.println("Avanzo al Frame:" + aleatorio);
+                            frame.dispose();
+                            new FrmFestividades().show();
+                            break;
+                        case 1300:
+                            System.out.println("Avanzo al Frame:" + aleatorio);
+                            frame.dispose();
+                            new FrmBailesTipicos().show();
                             break;
 
                         default:
 
                             break;
                     }
-                    
+
                     t.interrupt();
 
                 }
