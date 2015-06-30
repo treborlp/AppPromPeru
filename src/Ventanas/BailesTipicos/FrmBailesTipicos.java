@@ -67,7 +67,7 @@ public class FrmBailesTipicos extends javax.swing.JFrame {
         playBoton = new HiloSonido("SonidoClick.mp3", false);
         this.dispose();
         playSonidoAccion.close();
-        new FrmBailesTipicosPreguntas().show();
+        new Thread(new FrmBailesTipicosPreguntas()).start();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

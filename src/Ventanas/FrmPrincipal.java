@@ -5,27 +5,35 @@
  */
 package Ventanas;
 
-import com.sun.awt.AWTUtilities;
-import java.awt.Color;
+//import com.sun.awt.AWTUtilities;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import javax.swing.JOptionPane;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
-
+//import java.awt.Color;
 public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     private Thread hilo1, hilo2;
     HiloSonido playSonidoInicial;
     HiloSonido playBoton;
+    Player player;
     //private int velocidad = 10, x = 280, y = 120;
     private int x = 1080, y = 1920;
 
     public FrmPrincipal() {
         this.setUndecorated(true);
         initComponents();
-        playSonidoInicial= new HiloSonido("SonidoInicial.mp3",true);
+        playSonidoInicial = new HiloSonido("SonidoInicial.mp3", true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
         btnTest.setVisible(false);
         //this.setOpacity(0.4f);
-        AWTUtilities.setWindowOpaque(this, false);
+        //AWTUtilities.setWindowOpaque(this, false);
         //btnTest.setOpaque(false);
         //btnTest.setContentAreaFilled(true);
         //btnTest.setBorderPainted(false);
@@ -33,7 +41,6 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     }
 
-  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -76,11 +83,12 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
-       // playSong();
-        playBoton= new HiloSonido("SonidoClick.mp3",false);
-        playSonidoInicial.close();
-        new FrmRuletaRueda().show();
-        this.dispose();
+        // playSong();
+         playBoton = new HiloSonido("SonidoClick.mp3", false);
+         playSonidoInicial.close();
+         new FrmRuletaRueda().show();
+         this.dispose();
+
     }//GEN-LAST:event_btnTestActionPerformed
 
     /**

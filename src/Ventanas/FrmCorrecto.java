@@ -24,6 +24,7 @@ import Ventanas.FrmFestividades.FrmFestividades;
 import Ventanas.Gastronomia.FrmGastroPreguntas;
 import Ventanas.Gastronomia.FrmGastronomia;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -39,21 +40,26 @@ public class FrmCorrecto extends javax.swing.JFrame {
     public FrmCorrecto() {
         this.setUndecorated(true);
         initComponents();
-        playSonidoInicial = new HiloSonido("SonidoInicial.mp3", true);
+        playSonidoInicial = new HiloSonido("SonidoAccion.mp3", true);
         this.setLocationRelativeTo(null);
     }
 
     private void verificarPremio() {
         if (VariablesGoblales.primerIntento && VariablesGoblales.segundoIntento && VariablesGoblales.tercerIntento) {
-
+            new FrmGanaste().show();
+            this.dispose();
         } else if (VariablesGoblales.primerIntento && VariablesGoblales.segundoIntento) {
-
+            new FrmBuenJuego().show();
+            this.dispose();
         } else if (VariablesGoblales.primerIntento && VariablesGoblales.tercerIntento) {
-
+            new FrmBuenJuego().show();
+            this.dispose();
         } else if (VariablesGoblales.segundoIntento && VariablesGoblales.tercerIntento) {
-
+            new FrmBuenJuego().show();
+            this.dispose();
         } else {
-
+            new FrmSuerteProxima().show();
+            this.dispose();
         }
 
     }

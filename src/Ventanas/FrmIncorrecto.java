@@ -43,15 +43,37 @@ public class FrmIncorrecto extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    private void verificarPremio() {
+        if (VariablesGoblales.primerIntento && VariablesGoblales.segundoIntento && VariablesGoblales.tercerIntento) {
+            new FrmGanaste().show();
+            this.dispose();
+        } else if (VariablesGoblales.primerIntento && VariablesGoblales.segundoIntento) {
+            new FrmBuenJuego().show();
+            this.dispose();
+        } else if (VariablesGoblales.primerIntento && VariablesGoblales.tercerIntento) {
+            new FrmBuenJuego().show();
+            this.dispose();
+        } else if (VariablesGoblales.segundoIntento && VariablesGoblales.tercerIntento) {
+            new FrmBuenJuego().show();
+            this.dispose();
+        } else {
+            new FrmSuerteProxima().show();
+            this.dispose();
+        }
+
+    }
+
     private void Continuar(JFrame frame, int aleatorio) {
 
         int temp = VariablesGoblales.ruleta;
         switch (aleatorio) {
             case 100:
                 if (VariablesGoblales.intentos == 3) {
-                    System.out.println("Se acabo el Juego");
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmAreaNatural().show();
                     new Thread(new FrmAreaNaturalPreguntas()).start();
                     frame.dispose();
@@ -59,10 +81,12 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 200:
                 if (VariablesGoblales.intentos == 3) {
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
-
+                    playIntentoNuevo.close();
                     //new FrmAtractivos().show();
                     new Thread(new FrmAtractivosPreguntas()).start();
                     frame.dispose();
@@ -71,20 +95,24 @@ public class FrmIncorrecto extends javax.swing.JFrame {
 
             case 300:
                 if (VariablesGoblales.intentos == 3) {
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
-
+                    playIntentoNuevo.close();
                     new FrmComodin().show();
                     frame.dispose();
                     break;
                 }
             case 400:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmFestividades().show();
                     new Thread(new FrmFestiPreguntas()).start();
                     frame.dispose();
@@ -92,20 +120,24 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 500:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     new Thread(new FrmGastroPreguntas()).start();
                     frame.dispose();
                     break;
                 }
             case 600:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmCiudades().show();
                     new Thread(new FrmCiudadesPreguntas()).start();
                     frame.dispose();
@@ -113,20 +145,24 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 700:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     new FrmComodin().show();
                     frame.dispose();
                     break;
                 }
             case 800:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmComunidadNativa().show();
                     new Thread(new FrmComunidadNativaPreguntas()).start();
                     frame.dispose();
@@ -134,10 +170,12 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 900:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmActividades().show();
                     new Thread(new FrmActividadesPreguntas()).start();
                     frame.dispose();
@@ -145,10 +183,12 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 1000:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmAtractivos().show();
                     new Thread(new FrmAtractivosPreguntas()).start();
                     frame.dispose();
@@ -156,20 +196,24 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 1100:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     new FrmComodin().show();
                     frame.dispose();
                     break;
                 }
             case 1200:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmFestividades().show();
                     new Thread(new FrmFestiPreguntas()).start();
                     frame.dispose();
@@ -177,10 +221,12 @@ public class FrmIncorrecto extends javax.swing.JFrame {
                 }
             case 1300:
                 if (VariablesGoblales.intentos == 3) {
-
+                    playIntentoNuevo.close();
+                    verificarPremio();
                     System.out.println("Se acabo el Juego");
                     break;
                 } else {
+                    playIntentoNuevo.close();
                     //new FrmBailesTipicos().show();
                     new Thread(new FrmBailesTipicosPreguntas()).start();
                     frame.dispose();

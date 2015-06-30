@@ -43,7 +43,7 @@ public class HiloRotar implements Runnable {
         this.frame = frame;
         this.aleatorio = aleatorio;
         t = new Thread(this, "Hilo Rotar");
-        playSonidoRuleta = new HiloSonido("SonidoRuleta2.mp3", true);
+        playSonidoRuleta = new HiloSonido("SonidoRuleta.mp3", true);
         t.start();
 
     }
@@ -62,7 +62,8 @@ public class HiloRotar implements Runnable {
             Graphics2D g2 = (Graphics2D) g;
 
             try {
-                slate = ImageIO.read(new File(getClass().getResource("/Imagenes/ruleta.png").getFile()));
+                //slate = ImageIO.read(new File(getClass().getResource("/Imagenes/ruleta.png").getFile()));
+                slate = ImageIO.read(HiloRotar.class.getResourceAsStream("/Imagenes/ruleta.png"));
             } catch (Exception e) {
                 System.out.println(e);
             }
@@ -87,7 +88,7 @@ public class HiloRotar implements Runnable {
                 // System.out.println(j);
                 if (j == aleatorio) {
                     playSonidoRuleta.close();
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
 
                     switch (aleatorio) {
                         case 100:
@@ -168,6 +169,7 @@ public class HiloRotar implements Runnable {
             } while (true);
 
         } catch (Exception e) {
+
         }
 
     }

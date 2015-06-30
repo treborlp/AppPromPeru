@@ -7,6 +7,15 @@ package Ventanas;
 
 import Clases.HiloRotar;
 import Clases.VariablesGoblales;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -17,21 +26,20 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     /**
      * Creates new form FrmRuletaRueda
      */
-    
     HiloSonido playSonidoInicial;
-    
-    
+    HiloSonido playSonidoRuleta;
+
     public FrmRuletaRueda() {
         this.setUndecorated(true);
         initComponents();
-        playSonidoInicial= new HiloSonido("SonidoInicial.mp3",true);
+        playSonidoInicial = new HiloSonido("SonidoInicial.mp3", true);
         this.setLocationRelativeTo(null);
-        //HiloRotar Hilo = new HiloRotar(this);
+       // HiloRotar Hilo = new HiloRotar(this,);
     }
 
     private void iniciar() {
         playSonidoInicial.close();
-        //playSonidoRuleta=new HiloSonido("SonidoRuleta.mp3", false);
+        playSonidoRuleta = new HiloSonido("SonidoRuleta2.mp3", false);
         int temp = (int) Math.floor((Math.random() * 13) + 1) * 100;
         VariablesGoblales.ruleta = temp;
         HiloRotar Hilo = new HiloRotar(this, temp);
@@ -49,6 +57,7 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,6 +78,10 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(390, 890, 291, 290);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgTriangulo.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(490, 470, 90, 90);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bgRuleta.jpg"))); // NOI18N
         jLabel1.setAlignmentY(0.0F);
         getContentPane().add(jLabel1);
@@ -80,6 +93,7 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         iniciar();
         jButton1.hide();
+        // JOptionPane.showMessageDialog(this, "Test");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -120,5 +134,6 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

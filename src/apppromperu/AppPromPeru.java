@@ -5,6 +5,10 @@
  */
 package apppromperu;
 
+import Ventanas.FrmPrincipal;
+import Ventanas.FrmRuletaRueda;
+import Ventanas.FrmTest;
+
 /**
  *
  * @author 4ser
@@ -15,7 +19,12 @@ public class AppPromPeru {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       /* FrmTest test=new FrmTest();
+        test.setVisible(true);*/
+       /* FrmRuletaRueda r=new FrmRuletaRueda();
+        r.setVisible(true);*/
+        
+        new Thread(new FrmPrincipal()).start();
     }
     
 }
