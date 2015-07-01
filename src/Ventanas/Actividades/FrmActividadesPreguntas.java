@@ -163,7 +163,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
         getContentPane().add(lblPregunta);
         lblPregunta.setBounds(200, 560, 760, 340);
 
-        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +173,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
         getContentPane().add(jButton1);
         jButton1.setBounds(100, 980, 890, 110);
 
-        jButton2.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
         jButton2.setText("jButton2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +183,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
         getContentPane().add(jButton2);
         jButton2.setBounds(100, 1110, 890, 110);
 
-        jButton3.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
         jButton3.setText("jButton3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +193,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
         getContentPane().add(jButton3);
         jButton3.setBounds(100, 1240, 890, 110);
 
-        jButton4.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
         jButton4.setText("jButton4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,6 +329,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
                 lblPregunta.setBounds(i, 560, 760, 230);
             }
             //ArrayRespuestas=tools.getData(data.Respuestas, 1, 0, 1);
+            
 
         } catch (Exception e) {
 

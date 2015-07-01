@@ -60,7 +60,6 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         btnTest = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -70,15 +69,6 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
-
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(10, 1810, 160, 100);
 
         btnTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPrincipalGif.gif"))); // NOI18N
         btnTest.setBorder(null);
@@ -110,10 +100,6 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
         this.dispose();
 
     }//GEN-LAST:event_btnTestActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,7 +166,6 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTest;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,6 +6,7 @@
 package Ventanas;
 
 import Clases.Recursos;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,12 +18,16 @@ public class FrmTest extends javax.swing.JFrame {
     /**
      * Creates new form FrmTest
      */
-    Recursos tools=new Recursos();
+    Color myColor = new Color(52, 52, 52);
+
+    Recursos tools = new Recursos();
+
     public FrmTest() {
         this.setUndecorated(true);
         initComponents();
         this.setLocationRelativeTo(null);
         this.setIconImage(tools.setIcono().getImage());
+        this.getContentPane().setBackground(myColor);
     }
 
     /**
@@ -35,7 +40,8 @@ public class FrmTest extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(153, 153, 153));
+        setBackground(new java.awt.Color(255, 0, 102));
+        setForeground(new java.awt.Color(51, 51, 51));
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);

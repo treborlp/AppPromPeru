@@ -81,7 +81,7 @@ public class Data {
         
         {"29", "<html><div style='text-align: center'>¿En qué ciudad nació César Vallejo?</div></html>", "2", "La Libertad"},
         
-        {"30", "<html><div style='text-align: center'>¿Considerada como la Ciudad de la Amistad?</div></html>", "2", "Lambayeque"},
+        {"30", "<html><div style='text-align: center'>Considerada como la Ciudad de la Amistad</div></html>", "2", "Lambayeque"},
         
         {"31", "<html><div style='text-align: center'>¿Qué ciudad es conocida como 'La Ciudad de los Reyes'?</div></html>", "2", "Lima"},
         
@@ -103,7 +103,7 @@ public class Data {
         
         {"40", "<html><div style='text-align: center'>Colonia Austro Alemana en el mundo, ubicada en el corazón de la Selva Central del Perú</div></html>", "2", "Pasco"},
         
-        {"41", "<html><div style='text-align: center'>¿Con que otro nombre se le conoce a la ciudad de Moyobamba?</div></html>", "2", "San Martin"},
+        {"41", "<html><div style='text-align: center'>¿Con qué otro nombre se le conoce a la ciudad de Moyobamba?</div></html>", "2", "San Martin"},
         
         {"42", "<html><div style='text-align: center'>¿En qué departamento del Perú nación la heroína Micaela Batidas?</div></html>", "2", "Apurimac"},
         
@@ -224,7 +224,7 @@ public class Data {
         
         {"95", "<html><div style='text-align: center'>¿Dónde se encuentra la comunidad de Infierno?</div></html>", "7", "Madre de dios"},
         
-        {"96", "<html><div style='text-align: center'>Comunidad nativa que viven en isla flotantes hechas de totora</div></html>", "7", "Puno"},
+        {"96", "<html><div style='text-align: center'>¿En que isla de totora vive una comunidad nativa?</div></html>", "7", "Puno"},
         
         {"97", "<html><div style='text-align: center'>¿La comunidad más visitada en la Región Ucayali?</div></html>", "7", "Ucayali"},
         
@@ -289,8 +289,8 @@ public class Data {
         {"7", "Juanes", "0"},
         
         {"8", "Tejas y chocotejas", "8"},
-        {"8", "King Kong", "0"},
-        {"8", "Rosquita", "0"},
+        {"8", "King Kong y Rosquita", "0"},
+        {"8", "Rosquita y Tejas", "0"},
         {"8", "Suspiro a la limeña", "0"},
         
         {"9", "Papa la huancaína", "9"},
@@ -519,17 +519,17 @@ public class Data {
         
         //FESTIVIDADES
             
-        {"53", "El 24 de junio", "53"},
+        {"53", "24 de junio", "53"},
         {"53", "28 de julio", "0"},
         {"53", "27 de junio", "0"},
         {"53", "30 de julio", "0"},
         
-        {"54", "Raymillacta de los Chachapoya.", "54"},
+        {"54", "Raymillacta de los Chachapoya", "54"},
         {"54", "Fiesta de San Juan", "0"},
         {"54", "Fiesta de Santa Teresita", "0"},
         {"54", "Inmaculada concepción", "0"},
         
-        {"55", "El 15 de agosto", "55"},
+        {"55", "15 de agosto", "55"},
         {"55", "20 de setiembre", "0"},
         {"55", "9 de octubre", "0"},
         {"55", "9 de octubre", "0"},
@@ -587,7 +587,7 @@ public class Data {
         //ATRACTIVOS
         
         {"66", "Qoricancha", "66"},
-        {"66", "Allantaytambo", "0"},
+        {"66", "Ollantaytambo", "0"},
         {"66", "Huayna Picchu", "0"},
         {"66", "Cusco", "0"},
         
@@ -607,9 +607,9 @@ public class Data {
         {"69", "La Libertad", "0"},
         
         {"70", "Zorritos y Punta Sal", "70"},
-        {"70", "Macora ", "0"},
-        {"70", "Chorrillos", "0"},
-        {"70", "Miraflores", "0"},
+        {"70", "Mancora y Miraflores ", "0"},
+        {"70", "Chorrillos y Mancora", "0"},
+        {"70", "Miraflores y Chorrillos", "0"},
         
         {"71", "Concepción", "71"},
         {"71", "La Meced", "0"},
@@ -677,15 +677,15 @@ public class Data {
         {"83", "Tingo María – Huánuco", "0"},
         {"83", "Huascaran – Áncash", "0"},
         
-        {"84", "Cutervo, Cajamarca", "84"},
-        {"84", "Huaraz – Áncash", "0"},
-        {"84", "Huancayo – Junín", "0"},
-        {"84", "Cerro de Pasco – Pasco", "0"},
+        {"84", "Cutervo - Cajamarca", "84"},
+        {"84", "Huaraz - Áncash", "0"},
+        {"84", "Huancayo - Junín", "0"},
+        {"84", "Cerro de Pasco - Pasco", "0"},
         
-        {"85", "Paracas", "85"},
+        {"85", "Paracas y Tumbes", "85"},
         {"85", "Salinas y Aguada Blanca", "0"},
-        {"85", "Tumbes", "0"},
-        {"85", "Tambopata", "0"},
+        {"85", "Tumbes Y Tambopata", "0"},
+        {"85", "Tambopata y Paracas", "0"},
         
         {"86", "Nor Yauyos Cochas", "86"},
         {"86", "Lomas de Lachay", "0"},
@@ -792,9 +792,9 @@ public class Data {
         {"105", "Observación de Aves", "0"},
         
         {"106", "Isla Uros, Amantaní y Taquile", "106"},
-        {"106", "Islas Palomino", "0"},
-        {"106", "Isla Canarias", "0"},
-        {"106", "Islas Ballestas", "0"}
+        {"106", "Islas Palomino y Amananti", "0"},
+        {"106", "Isla Canarias y Taquile", "0"},
+        {"106", "Islas Ballestas y Palomino", "0"}
 
     };
 

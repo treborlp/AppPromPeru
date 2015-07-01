@@ -5,9 +5,8 @@
  */
 package apppromperu;
 
-
 import Ventanas.FrmPrincipal;
-import Ventanas.FrmRuletaRueda;
+
 import Ventanas.FrmTest;
 
 /**
