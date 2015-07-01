@@ -44,6 +44,7 @@ public class FrmComunidadNativaPreguntas extends javax.swing.JFrame implements R
         playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
         inicio();
         jButton1.setBounds(-990, 980, 890, 110);
         jButton2.setBounds(-990, 1110, 890, 110);
@@ -125,6 +126,7 @@ public class FrmComunidadNativaPreguntas extends javax.swing.JFrame implements R
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         lblTerceraOpcion = new javax.swing.JLabel();
         lblSegundaOpcion = new javax.swing.JLabel();
         lblPrimerOpcion = new javax.swing.JLabel();
@@ -137,6 +139,10 @@ public class FrmComunidadNativaPreguntas extends javax.swing.JFrame implements R
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Reloj.gif"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(120, 260, 140, 140);
 
         lblTerceraOpcion.setText("Tercer");
         getContentPane().add(lblTerceraOpcion);
@@ -333,6 +339,7 @@ public class FrmComunidadNativaPreguntas extends javax.swing.JFrame implements R
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblPrimerOpcion;
     private javax.swing.JLabel lblSegundaOpcion;

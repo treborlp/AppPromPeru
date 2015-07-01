@@ -5,6 +5,7 @@
  */
 package Ventanas.Actividades;
 
+import Clases.Recursos;
 import Ventanas.AreaNatural.*;
 import Ventanas.HiloSonido;
 
@@ -20,11 +21,14 @@ public class FrmActividades extends javax.swing.JFrame {
      */
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    Recursos tools=new Recursos();
     public FrmActividades() {
         this.setUndecorated(true);
         initComponents();
         playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
+        
     }
 
     /**

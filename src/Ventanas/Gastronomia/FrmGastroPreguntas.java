@@ -40,6 +40,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
         inicio();
         jButton1.setBounds(-990, 980, 890, 110);
         jButton2.setBounds(-990, 1110, 890, 110);
@@ -120,6 +121,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         lblTerceraOpcion = new javax.swing.JLabel();
         lblSegundaOpcion = new javax.swing.JLabel();
         lblPrimerOpcion = new javax.swing.JLabel();
@@ -131,7 +133,13 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         pnlText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1080, 1920));
+        setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Reloj.gif"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(120, 260, 140, 140);
 
         lblTerceraOpcion.setText("Tercer");
         getContentPane().add(lblTerceraOpcion);
@@ -149,7 +157,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         lblPregunta.setText("jLabel2");
         lblPregunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(lblPregunta);
-        lblPregunta.setBounds(200, 560, 760, 290);
+        lblPregunta.setBounds(200, 560, 760, 340);
 
         jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 72)); // NOI18N
         jButton1.setText("jButton1");
@@ -281,23 +289,23 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
             revelarElementos();
 
-            for (int i = 0; i < 101; i++) {
+            for (int i = 0; i < 101; i+=2) {
                 hilo1.sleep(1);
                 jButton1.setBounds(i, 980, 890, 110);
             }
-            for (int i = 0; i < 101; i++) {
+            for (int i = 0; i < 101; i+=2) {
                 hilo2.sleep(1);
                 jButton2.setBounds(i, 1110, 890, 110);
             }
-            for (int i = 0; i < 101; i++) {
+            for (int i = 0; i < 101; i+=2) {
                 hilo3.sleep(1);
                 jButton3.setBounds(i, 1240, 890, 110);
             }
-            for (int i = 0; i < 101; i++) {
+            for (int i = 0; i < 101; i+=2) {
                 hilo4.sleep(1);
                 jButton4.setBounds(i, 1370, 890, 110);
             }
-            for (int i = 0; i < 190; i++) {
+            for (int i = 0; i < 190; i+=2) {
                 hilo5.sleep(1);
                 lblPregunta.setBounds(i, 560, 760, 230);
             }
@@ -313,6 +321,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblPrimerOpcion;
     private javax.swing.JLabel lblSegundaOpcion;

@@ -5,6 +5,7 @@
  */
 package Ventanas.BailesTipicos;
 
+import Clases.Recursos;
 import Ventanas.HiloSonido;
 
 /**
@@ -18,12 +19,14 @@ public class FrmBailesTipicos extends javax.swing.JFrame {
      */
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    Recursos tools=new Recursos();
 
     public FrmBailesTipicos() {
         this.setUndecorated(true);
         initComponents();
         playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     /**

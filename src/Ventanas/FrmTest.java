@@ -5,6 +5,7 @@
  */
 package Ventanas;
 
+import Clases.Recursos;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,8 +17,12 @@ public class FrmTest extends javax.swing.JFrame {
     /**
      * Creates new form FrmTest
      */
+    Recursos tools=new Recursos();
     public FrmTest() {
+        this.setUndecorated(true);
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     /**
@@ -29,32 +34,14 @@ public class FrmTest extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(300, 400));
+        setBackground(new java.awt.Color(153, 153, 153));
+        setPreferredSize(new java.awt.Dimension(1080, 1920));
+        setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(273, 260, 130, 60);
-
-        jLabel1.setText("Fondo");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 801, 563);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       JOptionPane.showMessageDialog(this, "Test");
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,7 +79,5 @@ public class FrmTest extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

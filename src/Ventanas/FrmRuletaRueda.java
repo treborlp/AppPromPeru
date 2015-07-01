@@ -6,6 +6,7 @@
 package Ventanas;
 
 import Clases.HiloRotar;
+import Clases.Recursos;
 import Clases.VariablesGoblales;
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -28,12 +29,14 @@ public class FrmRuletaRueda extends javax.swing.JFrame {
      */
     HiloSonido playSonidoInicial;
     HiloSonido playSonidoRuleta;
+    Recursos tools=new Recursos();
 
     public FrmRuletaRueda() {
         this.setUndecorated(true);
         initComponents();
         playSonidoInicial = new HiloSonido("SonidoInicial.mp3", true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
        // HiloRotar Hilo = new HiloRotar(this,);
     }
 

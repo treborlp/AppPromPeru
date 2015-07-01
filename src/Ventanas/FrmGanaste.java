@@ -5,6 +5,7 @@
  */
 package Ventanas;
 
+import Clases.Recursos;
 import Clases.VariablesGoblales;
 
 /**
@@ -14,12 +15,14 @@ import Clases.VariablesGoblales;
 public class FrmGanaste extends javax.swing.JFrame {
 
     VariablesGoblales vg=new VariablesGoblales();
+    Recursos tools=new Recursos();
     HiloSonido playSonidoGanaste;
     public FrmGanaste() {
         this.setUndecorated(true);
         initComponents();
         playSonidoGanaste = new HiloSonido("SonidoGanasteTresAciertos.mp3", false);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     private void continuar(){

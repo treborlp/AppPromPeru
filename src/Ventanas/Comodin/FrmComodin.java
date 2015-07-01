@@ -5,6 +5,7 @@
  */
 package Ventanas.Comodin;
 
+import Clases.Recursos;
 import Ventanas.FrmGanaste;
 import Ventanas.HiloSonido;
 
@@ -18,11 +19,13 @@ public class FrmComodin extends javax.swing.JFrame {
      * Creates new form FrmComodin
      */
     HiloSonido playSonidoComodin;
+    Recursos tools=new Recursos();
     public FrmComodin() {
         this.setUndecorated(true);
         initComponents();
         playSonidoComodin= new HiloSonido("SonidoAccion.mp3",true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     /**

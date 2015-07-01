@@ -5,6 +5,7 @@
  */
 package Ventanas.ComunidadesNativas;
 
+import Clases.Recursos;
 import Ventanas.AreaNatural.*;
 import Ventanas.HiloSonido;
 
@@ -19,12 +20,14 @@ public class FrmComunidadNativa extends javax.swing.JFrame {
      */
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    Recursos tools=new Recursos();
 
     public FrmComunidadNativa() {
         this.setUndecorated(true);
         initComponents();
         playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     /**

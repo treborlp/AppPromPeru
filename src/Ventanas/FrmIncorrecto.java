@@ -5,6 +5,7 @@
  */
 package Ventanas;
 
+import Clases.Recursos;
 import Clases.VariablesGoblales;
 import Ventanas.Actividades.FrmActividades;
 import Ventanas.Actividades.FrmActividadesPreguntas;
@@ -35,12 +36,14 @@ public class FrmIncorrecto extends javax.swing.JFrame {
      * Creates new form FrmIncorrecto
      */
     HiloSonido playIntentoNuevo;
+    Recursos tools=new Recursos();
 
     public FrmIncorrecto() {
         this.setUndecorated(true);
         initComponents();
         playIntentoNuevo = new HiloSonido("SonidoMejorSuerte.mp3", false);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     private void verificarPremio() {

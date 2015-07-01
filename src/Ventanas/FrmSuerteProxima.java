@@ -5,6 +5,7 @@
  */
 package Ventanas;
 
+import Clases.Recursos;
 import Clases.VariablesGoblales;
 
 /**
@@ -14,12 +15,14 @@ import Clases.VariablesGoblales;
 public class FrmSuerteProxima extends javax.swing.JFrame {
 
     VariablesGoblales vg=new VariablesGoblales();
+    Recursos tools=new Recursos();
     HiloSonido playSonidoMejorSuerte;
     public FrmSuerteProxima() {
         this.setUndecorated(true);
         initComponents();
         playSonidoMejorSuerte = new HiloSonido("SonidoMejorSuerte.mp3", false);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     private void continuar(){

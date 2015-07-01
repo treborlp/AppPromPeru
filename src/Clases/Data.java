@@ -30,7 +30,7 @@ public class Data {
         
         {"4", "<html><div style='text-align: center'> ¿Que plato típico es más solicitado en Ayacucho?</div></html>", "1", "Ayacucho"},
         
-        {"5", "<html><div style='text-align: center'>¿Cuál es el dulce típico de Cajamarca que se come con rosqui?</div></html>", "1", "Cajamarca"},
+        {"5", "<html><div style='text-align: center'>¿Cuál es el dulce típico de Cajamarca que se come con rosquita?</div></html>", "1", "Cajamarca"},
         
         {"6", "<html><div style='text-align: center'>¿Cuál es el plato bandera de Tumbes?</div></html>", "1", "Tumbes"},
         
@@ -48,7 +48,7 @@ public class Data {
         
         {"13", "<html><div style='text-align: center'>¿Cómo se llama la bebida hecha a base de yuca?</div></html>", "1", "Loreto"},
         
-        {"14", "<html><div style='text-align: center'>¿Cómo  se llama la bebida hecha a base de aguaje?</div></html>", "1", "Loreto"},
+        {"14", "<html><div style='text-align: center'>¿Cómo se llama la bebida hecha a base de aguaje?</div></html>", "1", "Loreto"},
         
         {"15", "<html><div style='text-align: center'>Mencione un plato típico de Piura</div></html>", "1", "Piura"},
         
@@ -65,11 +65,11 @@ public class Data {
         //CIUDADES
         {"21", "<html><div style='text-align: center'>¿El centro de la ciudad del Cusco tiene la forma de un animal, cuál es?</div></html>", "2", "Cusco"},
         
-        {"22", "<html><div style='text-align: center'>¿Cuál fue la ciudad del Callejón de Huaylas que sepultada por un alud durante el terremoto de 1970?</div></html>", "2", "Ancash"},
+        {"22", "<html><div style='text-align: center'>¿Cuál fue la ciudad del Callejón de Huaylas que fue sepultada por un alud durante el terremoto de 1970?</div></html>", "2", "Ancash"},
         
-        {"23", "<html><div style='text-align: center'>¿Que ciudad es conocida como 'La Ciudad Blanca'?</div></html>", "2", "Arequipa"},
+        {"23", "<html><div style='text-align: center'>¿Qué ciudad es conocida como “La Ciudad Blanca”?</div></html>", "2", "Arequipa"},
         
-        {"24", "<html><div style='text-align: center'>¿Que Ciudad del sur cuenta con treinta y tres iglesias?</div></html>", "2", "Ayacucho"},
+        {"24", "<html><div style='text-align: center'>¿Qué ciudad del sur cuenta con treinta y tres iglesias?</div></html>", "2", "Ayacucho"},
         
         {"25", "<html><div style='text-align: center'>¿Qué ciudad es conocida como la capital del Carnaval?</div></html>", "2", "Cajamarca"},
         
@@ -95,7 +95,7 @@ public class Data {
         
         {"36", "<html><div style='text-align: center'>¿En qué ciudad de Huánuco vivió Micaela Villegas (La Perricholi)?</div></html>", "2", "Huánuco"},
         
-        {"37", "<html><div style='text-align: center'>¿La capital de la región Ucayali es?</div></html>", "2", "Ucayali"},
+        {"37", "<html><div style='text-align: center'>La capital de la región Ucayali es...</div></html>", "2", "Ucayali"},
         
         {"38", "<html><div style='text-align: center'>¿En qué ciudad de Perú nació el escritor José Carlos Mariátegui?</div></html>", "2", "Moquegua"},
         
@@ -134,7 +134,7 @@ public class Data {
         
         {"53", "<html><div style='text-align: center'>¿En qué fecha se realiza el INTI RAYMI?</div></html>", "4", "Cusco"},
         
-        {"54", "<html><div style='text-align: center'>¿Mencione el nombre de la Fiesta Costumbrista que celebra la Región Amazonas?</div></html>", "4", "Amazonas"},
+        {"54", "<html><div style='text-align: center'>Mencione el nombre de la Fiesta Costumbrista que celebra la Región Amazonas</div></html>", "4", "Amazonas"},
         
         {"55", "<html><div style='text-align: center'>¿Cuándo se celebra el aniversario de Arequipa?</div></html>", "4", "Arequipa"},
         
@@ -170,9 +170,9 @@ public class Data {
         
         {"70", "<html><div style='text-align: center'> ¿Cuáles son las playas más visitadas de Tumbes?</div></html>", "5", "Tumbes"},
         
-        {"71", "<html><div style='text-align: center'>Donde se ubica el convento de Ocopa</div></html>", "5", "Junin"},
+        {"71", "<html><div style='text-align: center'>¿Dónde se ubica el convento de Ocopa?</div></html>", "5", "Junin"},
         
-        {"72", "<html><div style='text-align: center'>¿Nombre de la ciudadela llamada Sol – Sol?</div></html>", "5", "La Libertad"},
+        {"72", "<html><div style='text-align: center'>Nombre de la ciudadela llamada Sol – Sol</div></html>", "5", "La Libertad"},
         
         {"73", "<html><div style='text-align: center; font-size : 32px;'>¿Cuál es el atractivo principal de la Región Lambayeque, cuyo interior alberga la magnificencia y majestuosidad del gobernante del antiguo Perú?</div></html>", "5", "Lambayeque"},
         
@@ -180,9 +180,9 @@ public class Data {
         
         {"75", "<html><div style='text-align: center'>¿Cómo se llama la Maravilla Natural que se encuentra en la región Loreto? </div></html>", "5", "Loreto"},
         
-        {"76", "<html><div style='text-align: center'>¿En Piura menciones un circuito de lagunas místicas?</div></html>", "5", "Piura"},
+        {"76", "<html><div style='text-align: center'>Un circuito de lagunas místicas en Piura</div></html>", "5", "Piura"},
         
-        {"77", "<html><div style='text-align: center'>Donde se encuentra ubicado el templo de las manos cruzadas de Kotosh</div></html>", "5", "Huánuco"},
+        {"77", "<html><div style='text-align: center'>¿Dónde se encuentra ubicado el templo de las manos cruzadas de Kotosh?</div></html>", "5", "Huánuco"},
         
         {"78", "<html><div style='text-align: center'>¿Cómo se llama la laguna principal que se encuentra en Pucallpa?</div></html>", "5", "Ucayali"},
         
@@ -212,11 +212,11 @@ public class Data {
         
         {"90", "<html><div style='text-align: center'>¿En qué región se ubica la Reserva Nacional del Titicaca?</div></html>", "6", "Puno"},
         
-        {"91", "<html><div style='text-align: center'>Área Natural Protegida que se encuentra en Oxapampa</div></html>", "6", "Pasco"},
+        {"91", "<html><div style='text-align: center'>Área natural protegida que se encuentra en Oxapampa</div></html>", "6", "Pasco"},
         
-        {"92", "<html><div style='text-align: center; font-size: 26px;'>Área natural protegida que se encuentra en Pasco y a la vez en un destino extremo donde podrás practicar escalada en roca, caminatas, paseos a caballo, ciclismo de montaña</div></html>", "6", "Pasco"},
+        {"92", "<html><div style='text-align: center; font-size: 25px;'>Área natural protegida que se encuentra en Pasco y a la vez en un destino extremo donde podrás practicar escalada en roca, caminatas, paseos a caballo, ciclismo de montaña y otros.</div></html>", "6", "Pasco"},
         
-        {"93", "<html><div style='text-align: center;font-size: 27px;'>¿Cuál es el parque nacional que está ubicado entre los ríos Huallaga y Ucayali, del cual parte de su territorio pertenece al departamento de San Martín?</div></html>", "6", "San Martin"},
+        {"93", "<html><div style='text-align: center;font-size: 26px;'>¿Cuál es el parque nacional que está ubicado entre los ríos Huallaga y Ucayali, del cual parte de su territorio pertenece al departamento de San Martín?</div></html>", "6", "San Martin"},
         
         //COMUNIDADES NATIVAS
         
@@ -278,12 +278,12 @@ public class Data {
         {"5", "Dulce de membrillo", "0"},
         {"5", "Suspiro a la Limeña", "0"},
         
-        {"6", "Seviche de conchas negras", "6"},
+        {"6", "cebiche de conchas negras", "6"},
         {"6", "Cebiche de trucha", "0"},
         {"6", "Cebiche de tarwi", "0"},
         {"6", "Cebiche de doncella", "0"},
         
-        {"7", "Carapulcra con sopa seca.", "7"},
+        {"7", "Carapulcra con sopa seca", "7"},
         {"7", "Locro de gallina", "0"},
         {"7", "Adobo de chancho", "0"},
         {"7", "Juanes", "0"},
@@ -508,9 +508,9 @@ public class Data {
         {"50", "Tondero", "0"},
         
         {"51", "Diablada, Morenada", "51"},
-        {"51", "Marinera", "0"},
-        {"51", "Huaylas", "0"},
-        {"51", "Tondero", "0"},
+        {"51", "Marinera y Tondero", "0"},
+        {"51", "Huaylas y Negoride", "0"},
+        {"51", "Tondero y Diablada", "0"},
         
         {"52", "Polka Tacneña", "52"},
         {"52", "Marinera", "0"},
@@ -672,7 +672,7 @@ public class Data {
         {"82", "Parque Nacional de Cutervo", "0"},
         {"82", "Parque Nacional de Tingo María", "0"},
         
-        {"83", "Lucanas-Ayacucho", "83"},
+        {"83", "Lucanas - Ayacucho", "83"},
         {"83", "Huancaya – Lima", "0"},
         {"83", "Tingo María – Huánuco", "0"},
         {"83", "Huascaran – Áncash", "0"},

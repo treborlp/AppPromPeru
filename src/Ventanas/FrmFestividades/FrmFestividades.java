@@ -5,6 +5,7 @@
  */
 package Ventanas.FrmFestividades;
 
+import Clases.Recursos;
 import Ventanas.HiloSonido;
 
 /**
@@ -18,12 +19,14 @@ public class FrmFestividades extends javax.swing.JFrame {
      */
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    Recursos tools=new Recursos();
 
     public FrmFestividades() {
         this.setUndecorated(true);
         initComponents();
         playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     /**

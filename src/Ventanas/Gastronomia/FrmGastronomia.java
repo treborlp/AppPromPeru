@@ -5,26 +5,29 @@
  */
 package Ventanas.Gastronomia;
 
+import Clases.Recursos;
 import Ventanas.HiloSonido;
 
 /**
  *
  * @author 4ser
  */
-public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
+public class FrmGastronomia extends javax.swing.JFrame /*implements Runnable*/ {
 
     Thread hilo1, hilo2;
     private int velocidad = 10, x = 280, y = 120;
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    Recursos tools=new Recursos();
 
     public FrmGastronomia() {
         this.setUndecorated(true);
         initComponents();
         playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
-        this.setSize(x, y);
-        btnJugar.setVisible(false);
+        //this.setSize(x, y);
+        btnJugar.setVisible(true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -101,39 +104,40 @@ public class FrmGastronomia extends javax.swing.JFrame implements Runnable {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Thread(new FrmGastronomia()).start();
+                // new Thread(new FrmGastronomia()).start();
+                new FrmGastronomia().setVisible(true);
             }
         });
     }
 
-    public void run() {
-        try {
-            this.setVisible(true);
-            for (int i = 0; i < 9; i++) {
-                hilo1.sleep(velocidad);
-                this.setSize(x, y);
-                this.setLocationRelativeTo(null);
-                x = x + 100;
-                //  System.out.println(this.getSize().width);
+    /*public void run() {
+     try {
+     this.setVisible(true);
+     for (int i = 0; i < 9; i++) {
+     hilo1.sleep(velocidad);
+     this.setSize(x, y);
+     this.setLocationRelativeTo(null);
+     x = x + 100;
+     //  System.out.println(this.getSize().width);
 
-                if (x == 1080) {
-                    for (int j = 0; j < 76; j++) {
-                        hilo2.sleep(velocidad);
-                        this.setSize(x, y);
-                        this.setLocationRelativeTo(null);
-                        y = y + 25;
-                        System.out.println(this.getSize().height);
-                    }
-                }
-            }
+     if (x == 1080) {
+     for (int j = 0; j < 76; j++) {
+     hilo2.sleep(velocidad);
+     this.setSize(x, y);
+     this.setLocationRelativeTo(null);
+     y = y + 25;
+     System.out.println(this.getSize().height);
+     }
+     }
+     }
 
-            //btnJugar.setBounds((int) ((this.getSize().width - 300) / 2), 500, 300, 300);
-            btnJugar.setVisible(true);
+     //btnJugar.setBounds((int) ((this.getSize().width - 300) / 2), 500, 300, 300);
+     btnJugar.setVisible(true);
 
-        } catch (Exception e) {
+     } catch (Exception e) {
 
-        }
-    }
+     }
+     }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnJugar;

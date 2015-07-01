@@ -6,11 +6,16 @@
 package Ventanas;
 
 //import com.sun.awt.AWTUtilities;
+import Clases.HiloRotar;
+import Clases.Recursos;
+import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
@@ -22,6 +27,8 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
     HiloSonido playSonidoInicial;
     HiloSonido playBoton;
     Player player;
+    
+    Recursos tools=new Recursos();
     //private int velocidad = 10, x = 280, y = 120;
     private int x = 1080, y = 1920;
 
@@ -31,6 +38,7 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
         playSonidoInicial = new HiloSonido("SonidoInicial.mp3", true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
         btnTest.setVisible(false);
         //this.setOpacity(0.4f);
         //AWTUtilities.setWindowOpaque(this, false);
@@ -41,6 +49,8 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     }
 
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,6 +60,7 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         btnTest = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -59,6 +70,15 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         setSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
+
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(10, 1810, 160, 100);
 
         btnTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnPrincipalGif.gif"))); // NOI18N
         btnTest.setBorder(null);
@@ -84,12 +104,16 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
         // playSong();
-         playBoton = new HiloSonido("SonidoClick.mp3", false);
-         playSonidoInicial.close();
-         new FrmRuletaRueda().show();
-         this.dispose();
+        playBoton = new HiloSonido("SonidoClick.mp3", false);
+        playSonidoInicial.close();
+        new FrmRuletaRueda().show();
+        this.dispose();
 
     }//GEN-LAST:event_btnTestActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,6 +180,7 @@ public class FrmPrincipal extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTest;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

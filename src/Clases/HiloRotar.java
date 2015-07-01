@@ -114,7 +114,8 @@ public class HiloRotar implements Runnable {
                         case 500:
                             System.out.println("Avanzo al Frame:" + aleatorio);
                             frame.dispose();
-                            new Thread(new FrmGastronomia()).start();
+                            //new Thread(new FrmGastronomia()).start();
+                            new FrmGastronomia().show();
                             break;
                         case 600:
                             System.out.println("Avanzo al Frame:" + aleatorio);

@@ -44,6 +44,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
         playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
         inicio();
         jButton1.setBounds(-990, 980, 890, 110);
         jButton2.setBounds(-990, 1110, 890, 110);
@@ -125,6 +126,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         lblTerceraOpcion = new javax.swing.JLabel();
         lblSegundaOpcion = new javax.swing.JLabel();
         lblPrimerOpcion = new javax.swing.JLabel();
@@ -138,6 +140,10 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1080, 1920));
         getContentPane().setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Reloj.gif"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(120, 260, 140, 140);
 
         lblTerceraOpcion.setText("Tercer");
         getContentPane().add(lblTerceraOpcion);
@@ -226,7 +232,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        // playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton4, lblPregunta);
-        
+        playSonidoAccion.close();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -334,6 +340,7 @@ public class FrmActividadesPreguntas extends javax.swing.JFrame implements Runna
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblPrimerOpcion;
     private javax.swing.JLabel lblSegundaOpcion;

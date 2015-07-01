@@ -5,6 +5,7 @@
  */
 package Ventanas.Atractivos;
 
+import Clases.Recursos;
 import Ventanas.HiloSonido;
 
 /**
@@ -18,12 +19,14 @@ public class FrmAtractivos extends javax.swing.JFrame {
      */
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    Recursos tools=new Recursos();
 
     public FrmAtractivos() {
         this.setUndecorated(true);
         initComponents();
         playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
         this.setLocationRelativeTo(null);
+        this.setIconImage(tools.setIcono().getImage());
     }
 
     /**

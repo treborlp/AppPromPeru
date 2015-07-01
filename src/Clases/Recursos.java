@@ -6,6 +6,8 @@
 package Clases;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -126,10 +128,10 @@ public class Recursos {
     }
 
     public void verificarHaciertos(JLabel lblPrimerIntento, JLabel lblSegundoIntento, JLabel lblTercerIntento) {
-        
-         ImageIcon correcta = new ImageIcon(getClass().getResource("/Imagenes/correcto.png"));
-         ImageIcon incorrecta = new ImageIcon(getClass().getResource("/Imagenes/incorrecto.png"));
-         
+
+        ImageIcon correcta = new ImageIcon(getClass().getResource("/Imagenes/correcto.png"));
+        ImageIcon incorrecta = new ImageIcon(getClass().getResource("/Imagenes/incorrecto.png"));
+
         if (VariablesGoblales.intentos == 0) {
             lblPrimerIntento.hide();
             lblSegundoIntento.hide();
@@ -137,8 +139,8 @@ public class Recursos {
         } else {
 
             if (VariablesGoblales.intentos == 1) {
-                    lblSegundoIntento.hide();
-                    lblTercerIntento.hide();
+                lblSegundoIntento.hide();
+                lblTercerIntento.hide();
                 if (VariablesGoblales.primerIntento) {
                     lblPrimerIntento.setIcon(correcta);
                 } else {
@@ -146,13 +148,13 @@ public class Recursos {
                 }
 
             } else if ((VariablesGoblales.intentos == 2)) {
-                    lblTercerIntento.hide();
+                lblTercerIntento.hide();
                 if (VariablesGoblales.segundoIntento) {
                     lblSegundoIntento.setIcon(correcta);
                 } else {
                     lblSegundoIntento.setIcon(incorrecta);
                 }
-                
+
                 if (VariablesGoblales.primerIntento) {
                     lblPrimerIntento.setIcon(correcta);
                 } else {
@@ -160,19 +162,19 @@ public class Recursos {
                 }
 
             } else {
-                    
+
                 if (VariablesGoblales.tercerIntento) {
                     lblTercerIntento.setIcon(correcta);
                 } else {
                     lblTercerIntento.setIcon(incorrecta);
                 }
-                
+
                 if (VariablesGoblales.segundoIntento) {
                     lblSegundoIntento.setIcon(correcta);
                 } else {
                     lblSegundoIntento.setIcon(incorrecta);
                 }
-                
+
                 if (VariablesGoblales.primerIntento) {
                     lblPrimerIntento.setIcon(correcta);
                 } else {
@@ -183,6 +185,17 @@ public class Recursos {
 
         }
 
+    }
+
+    public ImageIcon setIcono() {
+        ImageIcon icon = null;
+        try {
+            BufferedImage icono = ImageIO.read(getClass().getResourceAsStream("/Imagenes/icono_1.png"));
+            icon = new ImageIcon(icono);
+        } catch (Exception e) {
+
+        }
+        return icon;
     }
 
 }
