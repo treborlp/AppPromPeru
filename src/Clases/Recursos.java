@@ -103,8 +103,29 @@ public class Recursos {
         return getv;
     }
 
+    public int verificarNoRepeirNumero(String[] v) {
+
+        boolean b = true;
+        int temp;
+
+        do {
+            temp = (int) ((Math.random() * v.length) + 0);
+            System.out.println("Se Genero:" +temp);
+            if (temp != VariablesGoblales.tempnorepeet[0] && temp != VariablesGoblales.tempnorepeet[1] && temp != VariablesGoblales.tempnorepeet[2]) {
+                b = false;
+                System.out.println("Se Acepto:" +temp);
+            }
+            //System.out.println("Se Descarto:" +temp);
+
+        } while (b);
+
+        return temp;
+    }
+
     public String getPregunta(String[] v) {
-        int temp = (int) ((Math.random() * v.length) + 0);
+        //int temp = (int) ((Math.random() * v.length) + 0);
+        int temp = verificarNoRepeirNumero(v);
+        VariablesGoblales.tempnorepeet[VariablesGoblales.intentos] = temp;
         return v[temp];
     }
 

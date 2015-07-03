@@ -5,6 +5,7 @@
  */
 package apppromperu;
 
+import Clases.VariablesGoblales;
 import Ventanas.FrmPrincipal;
 
 import Ventanas.FrmTest;
@@ -18,14 +19,16 @@ public class AppPromPeru {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
         FrmTest test = new FrmTest();
-        //DglBackground test=new DglBackground(null, true);
         test.setVisible(true);
-        /* FrmRuletaRueda r=new FrmRuletaRueda();
-         r.setVisible(true);*/
-
         new Thread(new FrmPrincipal()).start();
+        
+      /*  for (int i = 0; i < VariablesGoblales.tempnorepeet.length; i++) {
+            System.out.println(VariablesGoblales.tempnorepeet[i]);
+        }*/
     }
 
 }

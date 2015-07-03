@@ -58,14 +58,14 @@ public class Data {
         
         {"18", "<html><div style='text-align: center'>¿Cuál es el plato típico de Ucayali?</div></html>", "1", "Ucayali"},
         
-        {"19", "<html><div style='text-align: center'>¿Cuál es la bebida que se elabora a base de yuca cocida y machacada y que se fermenta con dulce o azúcar?</div></html>", "1", "San Martín"},
+        {"19", "<html><div style='text-align: center; font-size : 50px;'>¿Cuál es la bebida que se elabora a base de yuca cocida y machacada y que se fermenta con dulce o azúcar?</div></html>", "1", "San Martín"},
         
         {"20", "<html><div style='text-align: center'>¿Cuales es el plato típico de Huancavelica?</div></html>", "1", "Huancavelica"},
         
         //CIUDADES
         {"21", "<html><div style='text-align: center'>¿El centro de la ciudad del Cusco tiene la forma de un animal, cuál es?</div></html>", "2", "Cusco"},
         
-        {"22", "<html><div style='text-align: center'>¿Cuál fue la ciudad del Callejón de Huaylas que fue sepultada por un alud durante el terremoto de 1970?</div></html>", "2", "Ancash"},
+        {"22", "<html><div style='text-align: center; font-size : 45px;'>¿Cuál fue la ciudad del Callejón de Huaylas que fue sepultada por un alud durante el terremoto de 1970?</div></html>", "2", "Ancash"},
         
         {"23", "<html><div style='text-align: center'>¿Qué ciudad es conocida como “La Ciudad Blanca”?</div></html>", "2", "Arequipa"},
         
@@ -101,7 +101,7 @@ public class Data {
         
         {"39", "<html><div style='text-align: center'>Distrito conocido por la Ruta del Café</div></html>", "2", "Pasco"},
         
-        {"40", "<html><div style='text-align: center'>Colonia Austro Alemana en el mundo, ubicada en el corazón de la Selva Central del Perú</div></html>", "2", "Pasco"},
+        {"40", "<html><div style='text-align: center; font-size : 45px;'>Colonia Austro Alemana en el mundo, ubicada en el corazón de la Selva Central del Perú</div></html>", "2", "Pasco"},
         
         {"41", "<html><div style='text-align: center'>¿Con qué otro nombre se le conoce a la ciudad de Moyobamba?</div></html>", "2", "San Martin"},
         
@@ -126,7 +126,7 @@ public class Data {
         
         {"50", "<html><div style='text-align: center; font-size: 30px;'>¿Cuál es el nombre del baile elegante acompañado principalmente por guitarras y que   era parte fundamental de toda reunión o jaranas, en casas, solares y callejones?</div></html>", "3", "Lima"},
         
-        {"51", "<html><div style='text-align: center'>Mencione dos danzas de la Festividad de la Virgen de la Candelaria</div></html>", "3", "Puno"},
+        {"51", "<html><div style='text-align: center; font-size : 45px;' >Mencione dos danzas de la Festividad de la Virgen de la Candelaria</div></html>", "3", "Puno"},
         
         {"52", "<html><div style='text-align: center'>¿Cuál es la danza representativa de Tacna?</div></html>", "3", "Tacna"},
         
@@ -154,9 +154,9 @@ public class Data {
         
         {"63", "<html><div style='text-align: center'>¿En qué departamento del Perú se celebra la yawar Fiesta?</div></html>", "4", "Apurimac"},
         
-        {"64", "<html><div style='text-align: center'>¿En qué departamento del Perú se celebra la fiesta de Sondor Raymi de epopeya Chanca?</div></html>", "4", "Apurimac"},
+        {"64", "<html><div style='text-align: center; font-size : 35px;'>¿En qué departamento del Perú se celebra la fiesta de Sondor Raymi de epopeya Chanca?</div></html>", "4", "Apurimac"},
         
-        {"65", "<html><div style='text-align: center'>¿En qué departamento del Perú se encuentra ubicado el conjunto arqueológico de saywite? </div></html>", "4", "Apurimac"},
+        {"65", "<html><div style='text-align: center; font-size : 40px;'>¿En qué departamento del Perú se encuentra ubicado el conjunto arqueológico de saywite? </div></html>", "4", "Apurimac"}, //Cortado
         
         //ATRACTIVOS
         
@@ -174,7 +174,7 @@ public class Data {
         
         {"72", "<html><div style='text-align: center'>Nombre de la ciudadela llamada Sol – Sol</div></html>", "5", "La Libertad"},
         
-        {"73", "<html><div style='text-align: center; font-size : 32px;'>¿Cuál es el atractivo principal de la Región Lambayeque, cuyo interior alberga la magnificencia y majestuosidad del gobernante del antiguo Perú?</div></html>", "5", "Lambayeque"},
+        {"73", "<html><div style='text-align: center; font-size : 28px;'>¿Cuál es el atractivo principal de la Región Lambayeque, cuyo interior alberga la magnificencia y majestuosidad del gobernante del antiguo Perú?</div></html>", "5", "Lambayeque"},
         
         {"74", "<html><div style='text-align: center'>¿Cómo se llama el parque donde se encuentra el Circuito Mágico del Agua?</div></html>", "5", "Lima"},
         
@@ -234,7 +234,7 @@ public class Data {
         
         {"99", "<html><div style='text-align: center'>¿Qué actividades se pueden realizar dentro del parque Nacional Huascarán?</div></html>", "8", "Ancash"},
         
-        {"100", "<html><div style='text-align: center'>Mencione un lugar de la región Amazonas en el cual se puede practicar caminatas y observación de aves</div></html>", "8", "Amazonas"},
+        {"100", "<html><div style='text-align: center; font-size : 45px;'>Mencione un lugar de la región Amazonas en el cual se puede practicar caminatas y observación de aves</div></html>", "8", "Amazonas"},
         
         {"101", "<html><div style='text-align: center'>¿Qué actividad se realiza en el rio Majes de Arequipa?</div></html>", "8", "Arequipa"},
         
