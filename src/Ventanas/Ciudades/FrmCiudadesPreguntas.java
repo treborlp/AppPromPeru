@@ -8,6 +8,7 @@ package Ventanas.Ciudades;
 import Ventanas.Gastronomia.*;
 import Clases.Data;
 import Clases.HiloCorrectoIncorrecto;
+import Clases.HiloEsperar;
 import Clases.Recursos;
 import Ventanas.FrmCorrecto;
 import Ventanas.FrmIncorrecto;
@@ -29,6 +30,7 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
     Data data = new Data();
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
+    HiloEsperar Hilo;
     
     HiloSonido playSonidoCorrecto;
     HiloSonido playSonidoIncorrecto;
@@ -212,24 +214,28 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
         playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton1, lblPregunta);
         playSonidoAccion.close();
+        Hilo.cerrarHilo();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton2, lblPregunta);
         playSonidoAccion.close();
+        Hilo.cerrarHilo();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton3, lblPregunta);
         playSonidoAccion.close();
+        Hilo.cerrarHilo();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         playBoton= new HiloSonido("SonidoClick.mp3",false);
         verificarRespuesta(jButton4, lblPregunta);
         playSonidoAccion.close();
+        Hilo.cerrarHilo();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -270,6 +276,7 @@ public class FrmCiudadesPreguntas extends javax.swing.JFrame implements Runnable
 
     public void run() {
         try {
+            Hilo = new HiloEsperar(this, jButton1, jButton2, jButton3, jButton4, lblPregunta, playSonidoAccion);
             this.setVisible(true);
             for (int i = 0; i < 9; i++) {
                 hilo1.sleep(velocidad);

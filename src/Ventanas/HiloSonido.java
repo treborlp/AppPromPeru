@@ -42,6 +42,8 @@ public class HiloSonido implements Runnable {
         player.close();
         t.interrupt();
     }
+    
+    
 
     @Override
     public void run() {
