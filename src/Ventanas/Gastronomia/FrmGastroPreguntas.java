@@ -19,7 +19,7 @@ import Ventanas.HiloSonido;
 
 /**
  *
- * @author 4ser
+ * @author Robert
  */
 public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
@@ -30,7 +30,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     HiloSonido playSonidoAccion;
     HiloSonido playBoton;
     HiloEsperar Hilo;
-    
+
     HiloSonido playSonidoCorrecto;
     HiloSonido playSonidoIncorrecto;
 
@@ -39,7 +39,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     public FrmGastroPreguntas() {
         this.setUndecorated(true);
         initComponents();
-        playSonidoAccion= new HiloSonido("SonidoAccion.mp3",true);
+        playSonidoAccion = new HiloSonido("SonidoAccion.mp3", true);
         this.setSize(x, y);
         this.setLocationRelativeTo(null);
         this.setIconImage(tools.setIcono().getImage());
@@ -53,6 +53,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
     public void inicio() {
         ocultarElementos();
+        VariablesGoblales.verificarEvento = true;
         tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
         lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 1, 2, 1)));
         //lblPregunta.setText("<html>"+ajustarTexto(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)))+"</html>");
@@ -78,6 +79,20 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         lblPregunta.show();
     }
 
+    private void verificarAcccion(JButton button) {
+
+        if (VariablesGoblales.verificarEvento) {
+            playBoton = new HiloSonido("SonidoClick.mp3", false);
+            verificarRespuesta(button, lblPregunta);
+            playSonidoAccion.close();
+            Hilo.cerrarHilo();
+            VariablesGoblales.verificarEvento = false;
+        } else {
+            System.out.println("Ya no puedo ejecutar eso");
+        }
+
+    }
+
     public void verificarRespuesta(JButton btnRespuesta, JLabel lblPregunta) {
 
         String pregunta = lblPregunta.getText();
@@ -95,7 +110,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         }
 
         if (temp.equalsIgnoreCase(respuesta)) {
-            playSonidoCorrecto= new HiloSonido("SonidoRespCorrecta.mp3",false);
+            playSonidoCorrecto = new HiloSonido("SonidoRespCorrecta.mp3", false);
             btnRespuesta.setBackground(Color.green);
             HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmCorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
             VariablesGoblales.intentos++;
@@ -111,7 +126,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             //System.out.println(VariablesGoblales.intentos);
 
         } else {
-            playSonidoIncorrecto= new HiloSonido("SonidoRespIncorrecta.mp3",false);
+            playSonidoIncorrecto = new HiloSonido("SonidoRespIncorrecta.mp3", false);
             btnRespuesta.setBackground(Color.red);
             HiloCorrectoIncorrecto hiloCorrectoIncorrecto = new HiloCorrectoIncorrecto(new FrmIncorrecto(), this, jButton1, jButton2, jButton3, jButton4, lblPregunta);
             VariablesGoblales.intentos++;
@@ -155,7 +170,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(lblPrimerOpcion);
         lblPrimerOpcion.setBounds(320, 1670, 77, 87);
 
-        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 60)); // NOI18N
+        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 45)); // NOI18N
         lblPregunta.setText("jLabel2");
         lblPregunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(lblPregunta);
@@ -210,30 +225,19 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        playBoton= new HiloSonido("SonidoClick.mp3",false);
-        verificarRespuesta(jButton1, lblPregunta);
-        playSonidoAccion.close();
+        verificarAcccion(jButton1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        playBoton= new HiloSonido("SonidoClick.mp3",false);
-        verificarRespuesta(jButton2, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton2);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        playBoton= new HiloSonido("SonidoClick.mp3",false);
-        verificarRespuesta(jButton3, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton3);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        playBoton= new HiloSonido("SonidoClick.mp3",false);
-        verificarRespuesta(jButton4, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton4);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -295,23 +299,23 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
 
             revelarElementos();
 
-            for (int i = 0; i < 101; i+=2) {
+            for (int i = 0; i < 101; i += 2) {
                 hilo1.sleep(1);
                 jButton1.setBounds(i, 980, 890, 110);
             }
-            for (int i = 0; i < 101; i+=2) {
+            for (int i = 0; i < 101; i += 2) {
                 hilo2.sleep(1);
                 jButton2.setBounds(i, 1110, 890, 110);
             }
-            for (int i = 0; i < 101; i+=2) {
+            for (int i = 0; i < 101; i += 2) {
                 hilo3.sleep(1);
                 jButton3.setBounds(i, 1240, 890, 110);
             }
-            for (int i = 0; i < 101; i+=2) {
+            for (int i = 0; i < 101; i += 2) {
                 hilo4.sleep(1);
                 jButton4.setBounds(i, 1370, 890, 110);
             }
-            for (int i = 0; i < 190; i+=2) {
+            for (int i = 0; i < 190; i += 2) {
                 hilo5.sleep(1);
                 lblPregunta.setBounds(i, 560, 760, 230);
             }

@@ -28,7 +28,7 @@ public class Data {
         
         {"3", "<html><div style='text-align: center'>¿Cuál es el postre representativo de Arequipa?</div></html>", "1", "Arequipa"},
         
-        {"4", "<html><div style='text-align: center'> ¿Que plato típico es más solicitado en Ayacucho?</div></html>", "1", "Ayacucho"},
+        {"4", "<html><div style='text-align: center'>¿Que plato típico es más solicitado en Ayacucho?</div></html>", "1", "Ayacucho"},
         
         {"5", "<html><div style='text-align: center'>¿Cuál es el dulce típico de Cajamarca que se come con rosquita?</div></html>", "1", "Cajamarca"},
         
@@ -58,7 +58,7 @@ public class Data {
         
         {"18", "<html><div style='text-align: center'>¿Cuál es el plato típico de Ucayali?</div></html>", "1", "Ucayali"},
         
-        {"19", "<html><div style='text-align: center; font-size : 50px;'>¿Cuál es la bebida que se elabora a base de yuca cocida y machacada y que se fermenta con dulce o azúcar?</div></html>", "1", "San Martín"},
+        {"19", "<html><div style='text-align: center; font-size : 35px;'>¿Cuál es la bebida que se elabora a base de yuca cocida y machacada y que se fermenta con dulce o azúcar?</div></html>", "1", "San Martín"},
         
         {"20", "<html><div style='text-align: center'>¿Cuales es el plato típico de Huancavelica?</div></html>", "1", "Huancavelica"},
         
@@ -89,9 +89,9 @@ public class Data {
         
         {"33", "<html><div style='text-align: center'>¿Cuál es la ciudad capital de Madre de Dios?</div></html>", "2", "¿Cuál es la ciudad capital de Madre de Dios?"},
         
-        {"34", "<html><div style='text-align: center'>¿Qué ciudad del norte es conocida como 'la del eterno calor'?</div></html>", "2", "Piura"},
+        {"34", "<html><div style='text-align: center'>¿Qué ciudad del norte es conocida como 'La del eterno calor'?</div></html>", "2", "Piura"},
         
-        {"35", "<html><div style='text-align: center'>¿Qué ciudad es conocida como 'la Ciudad Heroica'?</div></html>", "2", "Tacna"},
+        {"35", "<html><div style='text-align: center'>¿Qué ciudad es conocida como 'La Ciudad Heroica'?</div></html>", "2", "Tacna"},
         
         {"36", "<html><div style='text-align: center'>¿En qué ciudad de Huánuco vivió Micaela Villegas (La Perricholi)?</div></html>", "2", "Huánuco"},
         
@@ -107,7 +107,7 @@ public class Data {
         
         {"42", "<html><div style='text-align: center'>¿En qué departamento del Perú nación la heroína Micaela Batidas?</div></html>", "2", "Apurimac"},
         
-        {"43", "<html><div style='text-align: center'>¿En qué departamento del Perú nación Chabuca Granda? </div></html>", "2", "Apurímac"},
+        {"43", "<html><div style='text-align: center'>¿En qué departamento del Perú nación Chabuca Granda?</div></html>", "2", "Apurímac"},
         
         {"44", "<html><div style='text-align: center'>¿Qué departamento del Perú es conocido como tierra del mercurio?</div></html>", "2", "Huancavelica"},
         
@@ -116,15 +116,15 @@ public class Data {
 
         //BAILES TIPICOS
             
-        {"46", "<html><div style='text-align: center'>Menciona un baile representativo de Cusco</div></html>", "3", "Cusco"},
+        {"46", "<html><div style='text-align: center'>Menciona un baile representativo de Cusco:</div></html>", "3", "Cusco"},
         
         {"47", "<html><div style='text-align: center'>Danza típica de la región Ica</div></html>", "3", "Ica"},
         
         {"48", "<html><div style='text-align: center'>Baile típico del valle del Mantaro</div></html>", "3", "Junin"},
         
-        {"49", "<html><div style='text-align: center'>¿Cuál es la Danza típica de Trujillo?</div></html>", "3", "La Libertad"},
+        {"49", "<html><div style='text-align: center'>¿Cuál es la danza típica de Trujillo?</div></html>", "3", "La Libertad"},
         
-        {"50", "<html><div style='text-align: center; font-size: 30px;'>¿Cuál es el nombre del baile elegante acompañado principalmente por guitarras y que   era parte fundamental de toda reunión o jaranas, en casas, solares y callejones?</div></html>", "3", "Lima"},
+        {"50", "<html><div style='text-align: center; font-size: 30px;'>¿Cuál es el nombre del baile elegante acompañado principalmente por guitarras y que era parte fundamental de toda reunión o jaranas, en casas, solares y callejones?</div></html>", "3", "Lima"},
         
         {"51", "<html><div style='text-align: center; font-size : 45px;' >Mencione dos danzas de la Festividad de la Virgen de la Candelaria</div></html>", "3", "Puno"},
         
@@ -134,11 +134,11 @@ public class Data {
         
         {"53", "<html><div style='text-align: center'>¿En qué fecha se realiza el INTI RAYMI?</div></html>", "4", "Cusco"},
         
-        {"54", "<html><div style='text-align: center'>Mencione el nombre de la Fiesta Costumbrista que celebra la Región Amazonas</div></html>", "4", "Amazonas"},
+        {"54", "<html><div style='text-align: center'>Mencione el nombre de la fiesta costumbrista que celebra la Región Amazonas</div></html>", "4", "Amazonas"},
         
         {"55", "<html><div style='text-align: center'>¿Cuándo se celebra el aniversario de Arequipa?</div></html>", "4", "Arequipa"},
         
-        {"56", "<html><div style='text-align: center'>¿Qué región es la más visitada por semana santa?</div></html>", "4", "Ayacucho"},
+        {"56", "<html><div style='text-align: center'>¿Qué región es la más visitada por Semana Santa?</div></html>", "4", "Ayacucho"},
         
         {"57", "<html><div style='text-align: center'>¿En qué mes se celebra el Festival Internacional de la Vendimia de Ica?</div></html>", "4", "Ica"},
         
@@ -156,7 +156,7 @@ public class Data {
         
         {"64", "<html><div style='text-align: center; font-size : 35px;'>¿En qué departamento del Perú se celebra la fiesta de Sondor Raymi de epopeya Chanca?</div></html>", "4", "Apurimac"},
         
-        {"65", "<html><div style='text-align: center; font-size : 40px;'>¿En qué departamento del Perú se encuentra ubicado el conjunto arqueológico de saywite? </div></html>", "4", "Apurimac"}, //Cortado
+        {"65", "<html><div style='text-align: center; font-size : 35px;'>¿En qué departamento del Perú se encuentra ubicado el conjunto arqueológico de saywite?</div></html>", "4", "Apurimac"}, //Cortado
         
         //ATRACTIVOS
         
@@ -168,17 +168,17 @@ public class Data {
         
         {"69", "<html><div style='text-align: center'>¿Dónde se encuentran ubicados los Baños del Inca?</div></html>", "5", "Cajamarca"},
         
-        {"70", "<html><div style='text-align: center'> ¿Cuáles son las playas más visitadas de Tumbes?</div></html>", "5", "Tumbes"},
+        {"70", "<html><div style='text-align: center'>¿Cuáles son las playas más visitadas de Tumbes?</div></html>", "5", "Tumbes"},
         
         {"71", "<html><div style='text-align: center'>¿Dónde se ubica el convento de Ocopa?</div></html>", "5", "Junin"},
         
         {"72", "<html><div style='text-align: center'>Nombre de la ciudadela llamada Sol – Sol</div></html>", "5", "La Libertad"},
         
-        {"73", "<html><div style='text-align: center; font-size : 28px;'>¿Cuál es el atractivo principal de la Región Lambayeque, cuyo interior alberga la magnificencia y majestuosidad del gobernante del antiguo Perú?</div></html>", "5", "Lambayeque"},
+        {"73", "<html><div style='text-align: center; font-size : 25px;'>¿Cuál es el atractivo principal de la Región Lambayeque, cuyo interior alberga la magnificencia y majestuosidad del gobernante del antiguo Perú?</div></html>", "5", "Lambayeque"},
         
         {"74", "<html><div style='text-align: center'>¿Cómo se llama el parque donde se encuentra el Circuito Mágico del Agua?</div></html>", "5", "Lima"},
         
-        {"75", "<html><div style='text-align: center'>¿Cómo se llama la Maravilla Natural que se encuentra en la región Loreto? </div></html>", "5", "Loreto"},
+        {"75", "<html><div style='text-align: center'>¿Cómo se llama la Maravilla Natural que se encuentra en la Región Loreto? </div></html>", "5", "Loreto"},
         
         {"76", "<html><div style='text-align: center'>Un circuito de lagunas místicas en Piura</div></html>", "5", "Piura"},
         
@@ -228,7 +228,7 @@ public class Data {
         
         {"97", "<html><div style='text-align: center'>¿La comunidad más visitada en la Región Ucayali?</div></html>", "7", "Ucayali"},
         
-        {"98", "<html><div style='text-align: center;font-size: 35px;'>¿Cuál es la única etnia quechua en la Amazonía peruana, que conserva intactas sus costumbres ancestrales, su idioma y vestimenta?</div></html>", "7", "San Martín"},
+        {"98", "<html><div style='text-align: center;font-size: 25px;'>¿Cuál es la única etnia quechua en la Amazonía peruana, que conserva intactas sus costumbres ancestrales, su idioma y vestimenta?</div></html>", "7", "San Martín"},
         
         //ACTIVIDADES
         

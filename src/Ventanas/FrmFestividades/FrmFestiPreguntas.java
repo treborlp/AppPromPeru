@@ -55,6 +55,7 @@ public class FrmFestiPreguntas extends javax.swing.JFrame implements Runnable {
 
     public void inicio() {
         ocultarElementos();
+        VariablesGoblales.verificarEvento = true;
         tools.verificarHaciertos(lblPrimerOpcion, lblSegundaOpcion, lblTerceraOpcion);
         lblPregunta.setText(tools.getPregunta(tools.getData(data.Preguntas, 4, 2, 1)));
         //lblPregunta.setText("<html>"+ajustarTexto(tools.getPregunta(tools.getData(data.Preguntas, 2, 2, 1)))+"</html>");
@@ -78,6 +79,20 @@ public class FrmFestiPreguntas extends javax.swing.JFrame implements Runnable {
         jButton3.show();
         jButton4.show();
         lblPregunta.show();
+    }
+
+    private void verificarAcccion(JButton button) {
+
+        if (VariablesGoblales.verificarEvento) {
+            playBoton = new HiloSonido("SonidoClick.mp3", false);
+            verificarRespuesta(button, lblPregunta);
+            playSonidoAccion.close();
+            Hilo.cerrarHilo();
+            VariablesGoblales.verificarEvento = false;
+        } else {
+            System.out.println("Ya no puedo ejecutar eso");
+        }
+
     }
 
     public void verificarRespuesta(JButton btnRespuesta, JLabel lblPregunta) {
@@ -156,7 +171,7 @@ public class FrmFestiPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(lblPrimerOpcion);
         lblPrimerOpcion.setBounds(320, 1670, 77, 87);
 
-        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 58)); // NOI18N
+        lblPregunta.setFont(new java.awt.Font("Tekton Pro", 0, 50)); // NOI18N
         lblPregunta.setText("jLabel2");
         lblPregunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(lblPregunta);
@@ -211,31 +226,19 @@ public class FrmFestiPreguntas extends javax.swing.JFrame implements Runnable {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        playBoton = new HiloSonido("SonidoClick.mp3", false);
-        verificarRespuesta(jButton1, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        playBoton = new HiloSonido("SonidoClick.mp3", false);
-        verificarRespuesta(jButton2, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton2);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        playBoton = new HiloSonido("SonidoClick.mp3", false);
-        verificarRespuesta(jButton3, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton3);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        playBoton = new HiloSonido("SonidoClick.mp3", false);
-        verificarRespuesta(jButton4, lblPregunta);
-        playSonidoAccion.close();
-        Hilo.cerrarHilo();
+        verificarAcccion(jButton4);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
