@@ -176,7 +176,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(lblPregunta);
         lblPregunta.setBounds(200, 560, 760, 340);
 
-        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 50)); // NOI18N
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +186,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(jButton1);
         jButton1.setBounds(100, 980, 890, 110);
 
-        jButton2.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tekton Pro", 0, 50)); // NOI18N
         jButton2.setText("jButton2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,7 +196,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(jButton2);
         jButton2.setBounds(100, 1110, 890, 110);
 
-        jButton3.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Tekton Pro", 0, 50)); // NOI18N
         jButton3.setText("jButton3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +206,7 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
         getContentPane().add(jButton3);
         jButton3.setBounds(100, 1240, 890, 110);
 
-        jButton4.setFont(new java.awt.Font("Tekton Pro", 0, 65)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Tekton Pro", 0, 50)); // NOI18N
         jButton4.setText("jButton4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,27 +298,27 @@ public class FrmGastroPreguntas extends javax.swing.JFrame implements Runnable {
             }
 
             revelarElementos();
-
-            for (int i = 0; i < 101; i += 2) {
-                hilo1.sleep(1);
-                jButton1.setBounds(i, 980, 890, 110);
-            }
-            for (int i = 0; i < 101; i += 2) {
-                hilo2.sleep(1);
-                jButton2.setBounds(i, 1110, 890, 110);
-            }
-            for (int i = 0; i < 101; i += 2) {
-                hilo3.sleep(1);
-                jButton3.setBounds(i, 1240, 890, 110);
-            }
-            for (int i = 0; i < 101; i += 2) {
-                hilo4.sleep(1);
-                jButton4.setBounds(i, 1370, 890, 110);
-            }
-            for (int i = 0; i < 190; i += 2) {
+            for (int i = 0; i < 190; i ++) {
                 hilo5.sleep(1);
                 lblPregunta.setBounds(i, 560, 760, 230);
             }
+            for (int i = 0; i < 104; i += 3) {
+                hilo1.sleep(1);
+                jButton1.setBounds(i, 980, 890, 110);
+            }
+            for (int i = 0; i < 104; i += 3) {
+                hilo2.sleep(1);
+                jButton2.setBounds(i, 1110, 890, 110);
+            }
+            for (int i = 0; i < 104; i += 3) {
+                hilo3.sleep(1);
+                jButton3.setBounds(i, 1240, 890, 110);
+            }
+            for (int i = 0; i < 104; i += 3) {
+                hilo4.sleep(1);
+                jButton4.setBounds(i, 1370, 890, 110);
+            }
+            
             //ArrayRespuestas=tools.getData(data.Respuestas, 1, 0, 1);
 
         } catch (Exception e) {
